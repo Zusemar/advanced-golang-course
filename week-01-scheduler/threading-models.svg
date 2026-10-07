@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="diagram" viewBox="-24 -24 1184 564" width="1184" height="564" role="img" aria-label="Three panels. 1:1: each task has its own OS thread; when one task blocks, only its thread blocks. N:1: all tasks share one OS thread; when one blocks, all are blocked. M:N, Go's choice: many tasks on several OS threads; when one task blocks, only that task stops, if the runtime intercepts the blocking call.">
+<style>
+.diagram {
+  --bg: #fbfaf7; --fg: #1d1d1b; --muted: #6b6a66; --rule: #dcd9d1;
+  --accent: #0b6e8a; --code-bg: #f1efe9; --mark: #ffe58a;
+  --cue-bg: #1d1d1b; --cue-fg: #fbfaf7; --warn: #a3431b;
+}
+@media (prefers-color-scheme: dark) { .diagram {
+  --bg: #161615; --fg: #ecebe6; --muted: #9b9a94; --rule: #3a3936;
+  --accent: #5cc3dd; --code-bg: #22211f; --mark: #6b5a12;
+  --cue-bg: #ecebe6; --cue-fg: #161615; --warn: #ef8a5c;
+} }
+.diagram { font-family: system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+.diagram .bgr { fill: var(--bg); }
+.diagram text { fill: var(--fg); font-size: 19px; }
+.diagram .lbl { fill: var(--muted); font-size: 16px; }
+.diagram .ttl { fill: var(--accent); font-size: 22px; font-weight: 700; }
+.diagram .big { font-size: 20px; font-weight: 600; }
+.diagram .pbox { fill: var(--code-bg); stroke: var(--accent); stroke-width: 3; }
+.diagram .area { fill: var(--code-bg); stroke: var(--rule); stroke-width: 2; }
+.diagram .kern { fill: var(--code-bg); stroke: var(--warn); stroke-width: 2; stroke-dasharray: 8 6; }
+.diagram .m { fill: var(--bg); stroke: var(--fg); stroke-width: 2.5; }
+.diagram .m.idle { stroke: var(--muted); stroke-dasharray: 6 5; }
+.diagram .m.sys { stroke: var(--warn); stroke-width: 3; }
+.diagram .mt { font-size: 22px; font-weight: 700; }
+.diagram .cell { fill: var(--bg); stroke: var(--rule); stroke-width: 2; }
+.diagram .g { fill: var(--accent); }
+.diagram .gt { fill: var(--bg); font-size: 16px; font-weight: 700; }
+.diagram .gq { fill: var(--bg); stroke: var(--accent); stroke-width: 2.5; }
+.diagram .gqt { fill: var(--accent); font-size: 15px; font-weight: 700; }
+.diagram .gp { fill: var(--bg); stroke: var(--muted); stroke-width: 2; stroke-dasharray: 4 4; }
+.diagram .gpt { fill: var(--muted); font-size: 15px; font-weight: 700; }
+.diagram .link { stroke: var(--fg); stroke-width: 2.5; fill: none; }
+.diagram .arrow { stroke: var(--fg); stroke-width: 2.5; fill: none; marker-end: url(#ah-fg); }
+.diagram .arrow.w { stroke: var(--warn); marker-end: url(#ah-warn); }
+.diagram .arrow.d { stroke-dasharray: 7 6; }
+.diagram .ahfg { fill: var(--fg); }
+.diagram .ahw { fill: var(--warn); }
+.diagram .wt { fill: var(--warn); font-weight: 600; }
+.diagram .bad { fill: var(--warn); opacity: 0.22; }
+.diagram .badl { stroke: var(--warn); stroke-width: 3; fill: none; }
+.diagram .ok { fill: var(--accent); opacity: 0.85; }
+.diagram .grey { stroke: var(--muted); }
+.diagram .num { fill: var(--fg); }
+.diagram .numt { fill: var(--bg); font-size: 16px; font-weight: 700; }
+.diagram .numg { fill: var(--muted); }
+.diagram .step { fill: var(--bg); stroke: var(--fg); stroke-width: 2; }
+.diagram .step.w { stroke: var(--warn); }
+.diagram .sm { font-size: 17px; }
+.diagram .gn { fill: var(--warn); }
+</style>
+<title>Three ways to run N tasks on K CPUs</title>
+<rect class="bgr" x="-24" y="-24" width="1184" height="564" rx="12"/>
+<defs><marker id="fa-fg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahfg" d="M0 0L10 5L0 10z"/></marker><marker id="fa-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahw" d="M0 0L10 5L0 10z"/></marker></defs>
+<g><text class="ttl" x="0" y="28" text-anchor="start">1:1</text><text class="lbl" x="0" y="52" text-anchor="start">Java platform threads, Linux pthreads</text><text class="lbl" x="0" y="84" text-anchor="start">tasks</text><line class="link" x1="60" y1="135" x2="60" y2="200"/><circle class="gq" cx="60" cy="120" r="15"/><rect class="m" x="22.0" y="200" width="76" height="50" rx="6"/><text class="lbl" x="60" y="231" text-anchor="middle">thread</text><line class="link" x1="140" y1="135" x2="140" y2="200"/><circle class="gq" cx="140" cy="120" r="15"/><rect class="m" x="102.0" y="200" width="76" height="50" rx="6"/><text class="lbl" x="140" y="231" text-anchor="middle">thread</text><line class="link" x1="220" y1="135" x2="220" y2="200"/><circle class="gq" cx="220" cy="120" r="15"/><rect class="m" x="182.0" y="200" width="76" height="50" rx="6"/><text class="lbl" x="220" y="231" text-anchor="middle">thread</text><line class="badl" x1="300" y1="135" x2="300" y2="200"/><circle class="bad" cx="300" cy="120" r="15"/><circle class="badl" cx="300" cy="120" r="15"/><rect class="m" x="262.0" y="200" width="76" height="50" rx="6"/><text class="lbl" x="300" y="231" text-anchor="middle">thread</text><rect class="bad" x="262" y="200" width="76" height="50" rx="6"/><text class="wt sm" x="300" y="268" text-anchor="middle">blocked</text><text class="lbl" x="0" y="300" text-anchor="start">cost of a task</text><text class="sm" x="0" y="322" text-anchor="start">~8 MB virtual (glibc default = <tspan font-family="JetBrains Mono, Fira Code, Cascadia Mono, Menlo, Consolas, monospace">ulimit -s</tspan>)</text><text class="sm" x="0" y="344" text-anchor="start">~8–64 KB committed, a kernel object</text><text class="lbl" x="0" y="372" text-anchor="start">context switch</text><text class="sm" x="0" y="394" text-anchor="start">full kernel switch, ~1–2 µs</text><text class="lbl" x="0" y="428" text-anchor="start">when one task blocks</text><text class="wt sm" x="0" y="450" text-anchor="start">only that thread</text><text class="sm" x="0" y="472" text-anchor="start">the kernel handles it</text></g>
+<g><text class="ttl" x="388" y="28" text-anchor="start">N:1</text><text class="lbl" x="388" y="52" text-anchor="start">classic green threads, Python asyncio</text><line class="badl" x1="428" y1="135" x2="568" y2="200"/><line class="badl" x1="498" y1="135" x2="568" y2="200"/><line class="badl" x1="568" y1="135" x2="568" y2="200"/><line class="badl" x1="638" y1="135" x2="568" y2="200"/><line class="badl" x1="708" y1="135" x2="568" y2="200"/><circle class="bad" cx="428" cy="120" r="15"/><circle class="badl" cx="428" cy="120" r="15"/><circle class="bad" cx="498" cy="120" r="15"/><circle class="badl" cx="498" cy="120" r="15"/><circle class="bad" cx="568" cy="120" r="15"/><circle class="badl" cx="568" cy="120" r="15"/><circle class="bad" cx="638" cy="120" r="15"/><circle class="badl" cx="638" cy="120" r="15"/><circle class="bad" cx="708" cy="120" r="15"/><circle class="badl" cx="708" cy="120" r="15"/><rect class="m" x="530.0" y="200" width="76" height="50" rx="6"/><text class="lbl" x="568" y="231" text-anchor="middle">thread</text><rect class="bad" x="530" y="200" width="76" height="50" rx="6"/><text class="wt sm" x="428" y="88" text-anchor="middle">one blocks</text><text class="wt sm" x="568" y="268" text-anchor="middle">all blocked</text><text class="lbl" x="388" y="300" text-anchor="start">cost of a task</text><text class="sm" x="388" y="322" text-anchor="start">runtime-specific, small</text><text class="lbl" x="388" y="372" text-anchor="start">context switch</text><text class="sm" x="388" y="394" text-anchor="start">a user-space switch, no kernel entry</text><text class="lbl" x="388" y="428" text-anchor="start">when one task blocks</text><text class="wt sm" x="388" y="450" text-anchor="start">everything</text><text class="sm" x="388" y="472" text-anchor="start">unless every blocking call is rewritten</text></g>
+<g><text class="ttl" x="776" y="28" text-anchor="start">M:N</text><text class="lbl" x="776" y="52" text-anchor="start">Go, Erlang, Loom</text><text class="ttl" x="1136" y="28" text-anchor="end">Go’s choice</text><line class="link" x1="806" y1="135" x2="876" y2="200"/><line class="link" x1="866" y1="135" x2="876" y2="200"/><line class="link" x1="926" y1="135" x2="876" y2="200"/><line class="link" x1="986" y1="135" x2="1016" y2="200"/><line class="link" x1="1046" y1="135" x2="1016" y2="200"/><circle class="gq" cx="806" cy="120" r="15"/><circle class="gq" cx="866" cy="120" r="15"/><circle class="gq" cx="926" cy="120" r="15"/><circle class="gq" cx="986" cy="120" r="15"/><circle class="gq" cx="1046" cy="120" r="15"/><circle class="gp" cx="1106" cy="120" r="15"/><circle class="badl" cx="1106" cy="120" r="15"/><text class="wt sm" x="1121" y="88" text-anchor="end">blocked</text><rect class="m" x="838.0" y="200" width="76" height="50" rx="6"/><text class="lbl" x="876" y="231" text-anchor="middle">thread</text><rect class="m" x="978.0" y="200" width="76" height="50" rx="6"/><text class="lbl" x="1016" y="231" text-anchor="middle">thread</text><text class="wt sm" x="946" y="274" text-anchor="middle">only that task stops</text><text class="lbl" x="776" y="300" text-anchor="start">cost of a task</text><text class="sm" x="776" y="322" text-anchor="start">~2 KB stack + 456 B struct</text><text class="lbl" x="776" y="372" text-anchor="start">context switch</text><text class="sm" x="776" y="394" text-anchor="start">~100 ns, in-process</text><text class="lbl" x="776" y="428" text-anchor="start">when one task blocks</text><text class="wt sm" x="776" y="450" text-anchor="start">only that task</text><text class="sm" x="776" y="472" text-anchor="start">if the runtime intercepts blocking</text></g>
+<g><text class="lbl" x="0" y="508" text-anchor="start">Orders of magnitude. Nothing here was measured; the one exact number is the 456-byte <tspan font-family="JetBrains Mono, Fira Code, Cascadia Mono, Menlo, Consolas, monospace">g</tspan>.</text></g>
+</svg>
