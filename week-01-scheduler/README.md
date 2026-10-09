@@ -13,7 +13,9 @@ Three ways to map user threads to OS threads. Go picked M:N.
 Two Ps, each with its M, running G, runnext slot and 256-slot local run queue, plus the
 global run queue, parked goroutines, idle Ms and sysmon.
 
-The runnable demos are in [demos/](demos/). The slides and the lecture text come later.
+The runnable demos are in [demos/](demos/). The practice session, a bounded parallel
+executor built in six steps, is in [practice/](practice/). The slides and the lecture
+text come later.
 
 ## OS background: videos
 
