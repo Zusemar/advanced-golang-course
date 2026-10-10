@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="diagram" viewBox="0 0 906 410" width="906" height="410" role="img" aria-label="Id горутин: пачки по 16 на P">
+<style>
+.diagram {
+  --bg: #fbfaf7; --fg: #1d1d1b; --muted: #6b6a66; --rule: #dcd9d1;
+  --accent: #0b6e8a; --code-bg: #f1efe9; --warn: #a3431b; --rt: #b9b6ad;
+}
+@media (prefers-color-scheme: dark) { .diagram {
+  --bg: #161615; --fg: #ecebe6; --muted: #9b9a94; --rule: #3a3936;
+  --accent: #5cc3dd; --code-bg: #22211f; --warn: #ef8a5c; --rt: #5d5b56;
+} }
+.diagram { font-family: system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+.diagram .bgr { fill: var(--bg); }
+.diagram text { fill: var(--fg); font-size: 15px; }
+.diagram .lbl { fill: var(--muted); font-size: 13px; }
+.diagram .ttl { fill: var(--accent); font-size: 17px; font-weight: 700; }
+.diagram .sub { fill: var(--fg); font-size: 14px; font-weight: 600; }
+.diagram .free { fill: var(--code-bg); stroke: var(--rule); stroke-width: 1; }
+.diagram .task { fill: var(--accent); }
+.diagram .main { fill: var(--warn); }
+.diagram .rt { fill: var(--rt); }
+.diagram .gid { fill: var(--bg); font-size: 12px; font-weight: 600; }
+.diagram .num { fill: var(--fg); font-size: 12px; }
+</style>
+<rect class="bgr" width="906" height="410"/>
+<text class="ttl" x="20" y="24">Id горутин выдаются пачками по 16 на каждый P</text>
+<text class="sub" x="20" y="50">Случай 1: main вернулся из gcenable на P0. Первый воркер 10 (живой трейс шага 3)</text>
+<text class="lbl" x="120" y="82.0" text-anchor="end">P0, id 1–16</text>
+<rect class="main" x="130" y="62" width="34" height="30"/>
+<text class="gid" x="147.0" y="82.0" text-anchor="middle">1</text>
+<rect class="rt" x="166" y="62" width="34" height="30"/>
+<text class="num" x="183.0" y="82.0" text-anchor="middle">2</text>
+<rect class="rt" x="202" y="62" width="34" height="30"/>
+<text class="num" x="219.0" y="82.0" text-anchor="middle">3</text>
+<rect class="rt" x="238" y="62" width="34" height="30"/>
+<text class="num" x="255.0" y="82.0" text-anchor="middle">4</text>
+<rect class="rt" x="274" y="62" width="34" height="30"/>
+<text class="num" x="291.0" y="82.0" text-anchor="middle">5</text>
+<rect class="rt" x="310" y="62" width="34" height="30"/>
+<text class="num" x="327.0" y="82.0" text-anchor="middle">6</text>
+<rect class="rt" x="346" y="62" width="34" height="30"/>
+<text class="num" x="363.0" y="82.0" text-anchor="middle">7</text>
+<rect class="rt" x="382" y="62" width="34" height="30"/>
+<text class="num" x="399.0" y="82.0" text-anchor="middle">8</text>
+<rect class="rt" x="418" y="62" width="34" height="30"/>
+<text class="num" x="435.0" y="82.0" text-anchor="middle">9</text>
+<rect class="task" x="454" y="62" width="34" height="30"/>
+<text class="gid" x="471.0" y="82.0" text-anchor="middle">10</text>
+<rect class="task" x="490" y="62" width="34" height="30"/>
+<text class="gid" x="507.0" y="82.0" text-anchor="middle">11</text>
+<rect class="task" x="526" y="62" width="34" height="30"/>
+<text class="gid" x="543.0" y="82.0" text-anchor="middle">12</text>
+<rect class="task" x="562" y="62" width="34" height="30"/>
+<text class="gid" x="579.0" y="82.0" text-anchor="middle">13</text>
+<rect class="task" x="598" y="62" width="34" height="30"/>
+<text class="gid" x="615.0" y="82.0" text-anchor="middle">14</text>
+<rect class="task" x="634" y="62" width="34" height="30"/>
+<text class="gid" x="651.0" y="82.0" text-anchor="middle">15</text>
+<rect class="task" x="670" y="62" width="34" height="30"/>
+<text class="gid" x="687.0" y="82.0" text-anchor="middle">16</text>
+<text class="lbl" x="120" y="118.0" text-anchor="end">P0, id 17–32</text>
+<rect class="task" x="130" y="98" width="34" height="30"/>
+<text class="gid" x="147.0" y="118.0" text-anchor="middle">17</text>
+<rect class="free" x="166" y="98" width="34" height="30"/>
+<text class="num" x="183.0" y="118.0" text-anchor="middle">18</text>
+<rect class="free" x="202" y="98" width="34" height="30"/>
+<text class="num" x="219.0" y="118.0" text-anchor="middle">19</text>
+<rect class="free" x="238" y="98" width="34" height="30"/>
+<text class="num" x="255.0" y="118.0" text-anchor="middle">20</text>
+<rect class="free" x="274" y="98" width="34" height="30"/>
+<text class="num" x="291.0" y="118.0" text-anchor="middle">21</text>
+<rect class="free" x="310" y="98" width="34" height="30"/>
+<text class="num" x="327.0" y="118.0" text-anchor="middle">22</text>
+<rect class="free" x="346" y="98" width="34" height="30"/>
+<text class="num" x="363.0" y="118.0" text-anchor="middle">23</text>
+<rect class="free" x="382" y="98" width="34" height="30"/>
+<text class="num" x="399.0" y="118.0" text-anchor="middle">24</text>
+<rect class="free" x="418" y="98" width="34" height="30"/>
+<text class="num" x="435.0" y="118.0" text-anchor="middle">25</text>
+<rect class="free" x="454" y="98" width="34" height="30"/>
+<text class="num" x="471.0" y="118.0" text-anchor="middle">26</text>
+<rect class="free" x="490" y="98" width="34" height="30"/>
+<text class="num" x="507.0" y="118.0" text-anchor="middle">27</text>
+<rect class="free" x="526" y="98" width="34" height="30"/>
+<text class="num" x="543.0" y="118.0" text-anchor="middle">28</text>
+<rect class="free" x="562" y="98" width="34" height="30"/>
+<text class="num" x="579.0" y="118.0" text-anchor="middle">29</text>
+<rect class="free" x="598" y="98" width="34" height="30"/>
+<text class="num" x="615.0" y="118.0" text-anchor="middle">30</text>
+<rect class="free" x="634" y="98" width="34" height="30"/>
+<text class="num" x="651.0" y="118.0" text-anchor="middle">31</text>
+<rect class="free" x="670" y="98" width="34" height="30"/>
+<text class="num" x="687.0" y="118.0" text-anchor="middle">32</text>
+<text class="lbl" x="130" y="148">2 forcegchelper, 3 bgsweep, 4 bgscavenge, 5 updateMaxProcs, 6 runFinalizers, 7–9 трейс</text>
+<text class="sub" x="20" y="190">Случай 2: main вернулся из gcenable на P18 или P19, GOMAXPROCS(8) вернул его на P0. Первый воркер 8</text>
+<text class="lbl" x="120" y="222.0" text-anchor="end">P0, id 1–16</text>
+<rect class="main" x="130" y="202" width="34" height="30"/>
+<text class="gid" x="147.0" y="222.0" text-anchor="middle">1</text>
+<rect class="rt" x="166" y="202" width="34" height="30"/>
+<text class="num" x="183.0" y="222.0" text-anchor="middle">2</text>
+<rect class="rt" x="202" y="202" width="34" height="30"/>
+<text class="num" x="219.0" y="222.0" text-anchor="middle">3</text>
+<rect class="rt" x="238" y="202" width="34" height="30"/>
+<text class="num" x="255.0" y="222.0" text-anchor="middle">4</text>
+<rect class="rt" x="274" y="202" width="34" height="30"/>
+<text class="num" x="291.0" y="222.0" text-anchor="middle">5</text>
+<rect class="rt" x="310" y="202" width="34" height="30"/>
+<text class="num" x="327.0" y="222.0" text-anchor="middle">6</text>
+<rect class="rt" x="346" y="202" width="34" height="30"/>
+<text class="num" x="363.0" y="222.0" text-anchor="middle">7</text>
+<rect class="task" x="382" y="202" width="34" height="30"/>
+<text class="gid" x="399.0" y="222.0" text-anchor="middle">8</text>
+<rect class="task" x="418" y="202" width="34" height="30"/>
+<text class="gid" x="435.0" y="222.0" text-anchor="middle">9</text>
+<rect class="task" x="454" y="202" width="34" height="30"/>
+<text class="gid" x="471.0" y="222.0" text-anchor="middle">10</text>
+<rect class="task" x="490" y="202" width="34" height="30"/>
+<text class="gid" x="507.0" y="222.0" text-anchor="middle">11</text>
+<rect class="task" x="526" y="202" width="34" height="30"/>
+<text class="gid" x="543.0" y="222.0" text-anchor="middle">12</text>
+<rect class="task" x="562" y="202" width="34" height="30"/>
+<text class="gid" x="579.0" y="222.0" text-anchor="middle">13</text>
+<rect class="task" x="598" y="202" width="34" height="30"/>
+<text class="gid" x="615.0" y="222.0" text-anchor="middle">14</text>
+<rect class="task" x="634" y="202" width="34" height="30"/>
+<text class="gid" x="651.0" y="222.0" text-anchor="middle">15</text>
+<rect class="free" x="670" y="202" width="34" height="30"/>
+<text class="num" x="687.0" y="222.0" text-anchor="middle">16</text>
+<text class="lbl" x="120" y="258.0" text-anchor="end">P18/P19, id 17–32</text>
+<rect class="rt" x="130" y="238" width="34" height="30"/>
+<text class="num" x="147.0" y="258.0" text-anchor="middle">17</text>
+<rect class="rt" x="166" y="238" width="34" height="30"/>
+<text class="num" x="183.0" y="258.0" text-anchor="middle">18</text>
+<rect class="free" x="202" y="238" width="34" height="30"/>
+<text class="num" x="219.0" y="258.0" text-anchor="middle">19</text>
+<rect class="free" x="238" y="238" width="34" height="30"/>
+<text class="num" x="255.0" y="258.0" text-anchor="middle">20</text>
+<rect class="free" x="274" y="238" width="34" height="30"/>
+<text class="num" x="291.0" y="258.0" text-anchor="middle">21</text>
+<rect class="free" x="310" y="238" width="34" height="30"/>
+<text class="num" x="327.0" y="258.0" text-anchor="middle">22</text>
+<rect class="free" x="346" y="238" width="34" height="30"/>
+<text class="num" x="363.0" y="258.0" text-anchor="middle">23</text>
+<rect class="free" x="382" y="238" width="34" height="30"/>
+<text class="num" x="399.0" y="258.0" text-anchor="middle">24</text>
+<rect class="free" x="418" y="238" width="34" height="30"/>
+<text class="num" x="435.0" y="258.0" text-anchor="middle">25</text>
+<rect class="free" x="454" y="238" width="34" height="30"/>
+<text class="num" x="471.0" y="258.0" text-anchor="middle">26</text>
+<rect class="free" x="490" y="238" width="34" height="30"/>
+<text class="num" x="507.0" y="258.0" text-anchor="middle">27</text>
+<rect class="free" x="526" y="238" width="34" height="30"/>
+<text class="num" x="543.0" y="258.0" text-anchor="middle">28</text>
+<rect class="free" x="562" y="238" width="34" height="30"/>
+<text class="num" x="579.0" y="258.0" text-anchor="middle">29</text>
+<rect class="free" x="598" y="238" width="34" height="30"/>
+<text class="num" x="615.0" y="258.0" text-anchor="middle">30</text>
+<rect class="free" x="634" y="238" width="34" height="30"/>
+<text class="num" x="651.0" y="258.0" text-anchor="middle">31</text>
+<rect class="free" x="670" y="238" width="34" height="30"/>
+<text class="num" x="687.0" y="258.0" text-anchor="middle">32</text>
+<text class="lbl" x="130" y="288">2–4 те же, 5–7 трейс, 17 updateMaxProcs, 18 runFinalizers</text>
+<rect class="main" x="20" y="328" width="14" height="14"/><text class="lbl" x="40" y="340">main (id 1)</text>
+<rect class="task" x="150" y="328" width="14" height="14"/><text class="lbl" x="170" y="340">воркеры шага</text>
+<rect class="free" x="300" y="328" width="14" height="14"/><text class="lbl" x="320" y="340">id не выдан</text>
+<rect class="rt" x="20" y="352" width="14" height="14"/><text class="lbl" x="40" y="364">служебные горутины runtime: 2 forcegchelper, 3 bgsweep, 4 bgscavenge,</text>
+<text class="lbl" x="40" y="382">updateMaxProcs и runFinalizers (5, 6 или 17, 18), три горутины трейса</text>
+</svg>
