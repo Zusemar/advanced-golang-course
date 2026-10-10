@@ -20,6 +20,12 @@ at 19:30 MSK. The course runs from 7 October to 8 December 2026.
 
 Material is added week by week.
 
+## Homework
+
+Fork this repository and solve each week's homework in your fork, under
+`week-NN-*/homework/`. Send the link to your fork to the course chat once. The first task
+and the full rules are in [week-01-scheduler/homework/](week-01-scheduler/homework/).
+
 ## Toolchain
 
 Every module pins `go 1.27.1`. See [week-01-scheduler/demos/](week-01-scheduler/demos/)

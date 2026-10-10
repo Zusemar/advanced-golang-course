@@ -14,7 +14,8 @@ Two Ps, each with its M, running G, runnext slot and 256-slot local run queue, p
 global run queue, parked goroutines, idle Ms and sysmon.
 
 The runnable demos are in [demos/](demos/). The practice session, a bounded parallel
-executor built in six steps, is in [practice/](practice/). The slides and the lecture
+executor built in six steps, is in [practice/](practice/). The homework, `ParallelMap`,
+is in [homework/](homework/), due Friday 16 October, 23:59 MSK. The slides and the lecture
 text come later.
 
 ## OS background: videos
