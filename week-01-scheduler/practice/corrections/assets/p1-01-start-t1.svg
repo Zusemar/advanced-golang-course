@@ -1,0 +1,321 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="diagram" viewBox="0 0 960 346" width="960" height="346" role="img" aria-label="t1: машина простаивала перед запуском, последний P через 2.88 мс">
+<style>
+.diagram {
+  --bg: #fbfaf7; --fg: #1d1d1b; --muted: #6b6a66; --rule: #dcd9d1;
+  --accent: #0b6e8a; --code-bg: #f1efe9; --warn: #a3431b; --rt: #b9b6ad;
+}
+@media (prefers-color-scheme: dark) { .diagram {
+  --bg: #161615; --fg: #ecebe6; --muted: #9b9a94; --rule: #3a3936;
+  --accent: #5cc3dd; --code-bg: #22211f; --warn: #ef8a5c; --rt: #5d5b56;
+} }
+.diagram { font-family: system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+.diagram .bgr { fill: var(--bg); }
+.diagram text { fill: var(--fg); font-size: 15px; }
+.diagram .lbl { fill: var(--muted); font-size: 13px; }
+.diagram .ttl { fill: var(--accent); font-size: 17px; font-weight: 700; }
+.diagram .row { fill: var(--code-bg); }
+.diagram .grid { stroke: var(--rule); stroke-width: 1; }
+.diagram .task { fill: var(--accent); }
+.diagram .main { fill: var(--warn); }
+.diagram .rt { fill: var(--rt); }
+.diagram .idle { fill: var(--warn); opacity: 0.18; }
+.diagram .mark { stroke: var(--fg); stroke-width: 2; }
+.diagram .mt { fill: var(--fg); font-size: 12px; font-weight: 600; }
+</style>
+<rect class="bgr" width="960" height="346"/>
+<text class="ttl" x="56" y="22">t1: машина простаивала перед запуском, последний P через 2.88 мс</text>
+<line class="grid" x1="56.0" y1="30" x2="56.0" y2="290"/>
+<text class="lbl" x="56.0" y="306" text-anchor="middle">0</text>
+<line class="grid" x1="167.0" y1="30" x2="167.0" y2="290"/>
+<text class="lbl" x="167.0" y="306" text-anchor="middle">0.5</text>
+<line class="grid" x1="278.0" y1="30" x2="278.0" y2="290"/>
+<text class="lbl" x="278.0" y="306" text-anchor="middle">1</text>
+<line class="grid" x1="389.0" y1="30" x2="389.0" y2="290"/>
+<text class="lbl" x="389.0" y="306" text-anchor="middle">1.5</text>
+<line class="grid" x1="500.0" y1="30" x2="500.0" y2="290"/>
+<text class="lbl" x="500.0" y="306" text-anchor="middle">2</text>
+<line class="grid" x1="611.0" y1="30" x2="611.0" y2="290"/>
+<text class="lbl" x="611.0" y="306" text-anchor="middle">2.5</text>
+<line class="grid" x1="722.0" y1="30" x2="722.0" y2="290"/>
+<text class="lbl" x="722.0" y="306" text-anchor="middle">3</text>
+<line class="grid" x1="833.0" y1="30" x2="833.0" y2="290"/>
+<text class="lbl" x="833.0" y="306" text-anchor="middle">3.5</text>
+<line class="grid" x1="944.0" y1="30" x2="944.0" y2="290"/>
+<text class="lbl" x="944.0" y="306" text-anchor="middle">4</text>
+<text class="lbl" x="500.0" y="324" text-anchor="middle">мс от начала шага</text>
+<text class="lbl" x="48" y="52" text-anchor="end">P0</text>
+<rect class="row" x="56" y="34" width="888.0" height="26"/>
+<text class="lbl" x="48" y="84" text-anchor="end">P1</text>
+<rect class="row" x="56" y="66" width="888.0" height="26"/>
+<text class="lbl" x="48" y="116" text-anchor="end">P2</text>
+<rect class="row" x="56" y="98" width="888.0" height="26"/>
+<text class="lbl" x="48" y="148" text-anchor="end">P3</text>
+<rect class="row" x="56" y="130" width="888.0" height="26"/>
+<text class="lbl" x="48" y="180" text-anchor="end">P4</text>
+<rect class="row" x="56" y="162" width="888.0" height="26"/>
+<text class="lbl" x="48" y="212" text-anchor="end">P5</text>
+<rect class="row" x="56" y="194" width="888.0" height="26"/>
+<text class="lbl" x="48" y="244" text-anchor="end">P6</text>
+<rect class="row" x="56" y="226" width="888.0" height="26"/>
+<text class="lbl" x="48" y="276" text-anchor="end">P7</text>
+<rect class="row" x="56" y="258" width="888.0" height="26"/>
+<rect class="rt" x="58.0" y="229" width="6.3" height="20"/>
+<rect class="task" x="64.6" y="229" width="3.4" height="20"/>
+<rect class="task" x="68.2" y="229" width="1.1" height="20"/>
+<rect class="task" x="69.3" y="229" width="1.1" height="20"/>
+<rect class="task" x="68.7" y="197" width="2.9" height="20"/>
+<rect class="task" x="70.4" y="229" width="1.2" height="20"/>
+<rect class="task" x="71.7" y="229" width="1.3" height="20"/>
+<rect class="task" x="73.0" y="229" width="1.5" height="20"/>
+<rect class="rt" x="71.7" y="197" width="4.1" height="20"/>
+<rect class="task" x="74.5" y="229" width="1.9" height="20"/>
+<rect class="rt" x="76.0" y="197" width="1.1" height="20"/>
+<rect class="task" x="76.5" y="229" width="1.8" height="20"/>
+<rect class="task" x="78.4" y="229" width="0.6" height="20"/>
+<rect class="task" x="78.8" y="229" width="0.6" height="20"/>
+<rect class="task" x="79.0" y="229" width="0.6" height="20"/>
+<rect class="rt" x="79.6" y="197" width="0.6" height="20"/>
+<rect class="rt" x="79.9" y="197" width="0.6" height="20"/>
+<rect class="task" x="80.0" y="197" width="0.8" height="20"/>
+<rect class="task" x="80.9" y="197" width="3.6" height="20"/>
+<rect class="task" x="79.6" y="229" width="5.4" height="20"/>
+<rect class="task" x="84.5" y="197" width="2.1" height="20"/>
+<rect class="task" x="86.6" y="197" width="2.1" height="20"/>
+<rect class="task" x="85.0" y="229" width="3.8" height="20"/>
+<rect class="task" x="88.8" y="197" width="2.3" height="20"/>
+<rect class="task" x="88.8" y="229" width="3.9" height="20"/>
+<rect class="task" x="91.2" y="197" width="2.4" height="20"/>
+<rect class="task" x="93.7" y="197" width="2.6" height="20"/>
+<rect class="task" x="92.8" y="229" width="4.1" height="20"/>
+<rect class="task" x="96.3" y="197" width="2.7" height="20"/>
+<rect class="task" x="96.9" y="229" width="4.2" height="20"/>
+<rect class="task" x="99.0" y="197" width="2.9" height="20"/>
+<rect class="task" x="101.9" y="197" width="3.0" height="20"/>
+<rect class="task" x="101.1" y="229" width="4.3" height="20"/>
+<rect class="task" x="104.9" y="197" width="3.1" height="20"/>
+<rect class="task" x="105.5" y="229" width="4.5" height="20"/>
+<rect class="task" x="108.1" y="197" width="3.3" height="20"/>
+<rect class="task" x="109.9" y="229" width="4.6" height="20"/>
+<rect class="task" x="111.4" y="197" width="3.4" height="20"/>
+<rect class="task" x="114.6" y="229" width="4.8" height="20"/>
+<rect class="task" x="114.9" y="197" width="4.9" height="20"/>
+<rect class="task" x="119.4" y="229" width="5.2" height="20"/>
+<rect class="task" x="119.9" y="197" width="4.8" height="20"/>
+<rect class="task" x="124.8" y="229" width="5.7" height="20"/>
+<rect class="task" x="125.2" y="197" width="7.7" height="20"/>
+<rect class="task" x="130.5" y="229" width="5.6" height="20"/>
+<rect class="task" x="136.1" y="229" width="5.7" height="20"/>
+<rect class="task" x="132.9" y="197" width="9.4" height="20"/>
+<rect class="task" x="141.9" y="229" width="5.9" height="20"/>
+<rect class="task" x="142.4" y="197" width="8.0" height="20"/>
+<rect class="task" x="147.9" y="229" width="6.0" height="20"/>
+<rect class="task" x="150.5" y="197" width="8.1" height="20"/>
+<rect class="task" x="153.9" y="229" width="6.2" height="20"/>
+<rect class="task" x="160.1" y="229" width="6.3" height="20"/>
+<rect class="task" x="158.6" y="197" width="8.3" height="20"/>
+<rect class="task" x="166.4" y="229" width="11.8" height="20"/>
+<rect class="task" x="166.9" y="197" width="12.7" height="20"/>
+<rect class="task" x="178.3" y="229" width="6.6" height="20"/>
+<rect class="task" x="179.7" y="197" width="8.6" height="20"/>
+<rect class="task" x="185.0" y="229" width="6.7" height="20"/>
+<rect class="task" x="188.3" y="197" width="8.7" height="20"/>
+<rect class="task" x="191.8" y="229" width="6.9" height="20"/>
+<rect class="task" x="198.7" y="229" width="7.0" height="20"/>
+<rect class="task" x="197.0" y="197" width="8.8" height="20"/>
+<rect class="task" x="205.8" y="229" width="7.2" height="20"/>
+<rect class="task" x="205.9" y="197" width="9.3" height="20"/>
+<rect class="task" x="206.2" y="165" width="10.7" height="20"/>
+<rect class="task" x="213.0" y="229" width="7.6" height="20"/>
+<rect class="task" x="215.3" y="197" width="9.1" height="20"/>
+<rect class="task" x="217.6" y="165" width="10.2" height="20"/>
+<rect class="task" x="220.6" y="229" width="7.5" height="20"/>
+<rect class="task" x="224.5" y="197" width="9.3" height="20"/>
+<rect class="task" x="228.2" y="229" width="7.6" height="20"/>
+<rect class="task" x="226.2" y="133" width="10.3" height="20"/>
+<rect class="task" x="227.8" y="165" width="10.2" height="20"/>
+<rect class="task" x="233.8" y="197" width="9.4" height="20"/>
+<rect class="task" x="235.8" y="229" width="7.7" height="20"/>
+<rect class="task" x="238.1" y="165" width="10.6" height="20"/>
+<rect class="task" x="243.2" y="197" width="9.7" height="20"/>
+<rect class="task" x="237.2" y="133" width="19.0" height="20"/>
+<rect class="task" x="248.7" y="165" width="10.5" height="20"/>
+<rect class="task" x="253.0" y="197" width="9.7" height="20"/>
+<rect class="task" x="259.3" y="165" width="10.7" height="20"/>
+<rect class="task" x="244.0" y="229" width="26.6" height="20"/>
+<rect class="task" x="256.3" y="133" width="18.9" height="20"/>
+<rect class="main" x="56.0" y="261" width="219.4" height="20"/>
+<rect class="task" x="270.0" y="165" width="11.0" height="20"/>
+<rect class="task" x="281.0" y="165" width="11.0" height="20"/>
+<rect class="task" x="275.2" y="133" width="18.9" height="20"/>
+<rect class="task" x="270.6" y="229" width="26.7" height="20"/>
+<rect class="task" x="263.2" y="197" width="35.0" height="20"/>
+<rect class="task" x="292.0" y="165" width="11.1" height="20"/>
+<rect class="task" x="294.2" y="133" width="19.0" height="20"/>
+<rect class="task" x="303.1" y="165" width="11.3" height="20"/>
+<rect class="task" x="265.3" y="101" width="49.5" height="20"/>
+<rect class="task" x="297.3" y="229" width="27.6" height="20"/>
+<rect class="task" x="314.4" y="165" width="11.3" height="20"/>
+<rect class="task" x="313.2" y="133" width="19.2" height="20"/>
+<rect class="task" x="298.3" y="197" width="34.9" height="20"/>
+<rect class="task" x="325.7" y="165" width="11.5" height="20"/>
+<rect class="task" x="337.3" y="165" width="11.6" height="20"/>
+<rect class="task" x="332.4" y="133" width="19.3" height="20"/>
+<rect class="task" x="324.9" y="229" width="26.8" height="20"/>
+<rect class="task" x="348.9" y="165" width="11.8" height="20"/>
+<rect class="task" x="333.2" y="197" width="35.0" height="20"/>
+<rect class="task" x="351.7" y="133" width="19.4" height="20"/>
+<rect class="task" x="360.7" y="165" width="11.9" height="20"/>
+<rect class="task" x="315.6" y="101" width="61.2" height="20"/>
+<rect class="task" x="351.8" y="229" width="28.6" height="20"/>
+<rect class="task" x="372.7" y="165" width="12.0" height="20"/>
+<rect class="task" x="371.2" y="133" width="19.6" height="20"/>
+<rect class="task" x="384.7" y="165" width="12.2" height="20"/>
+<rect class="task" x="368.3" y="197" width="35.2" height="20"/>
+<rect class="task" x="380.3" y="229" width="27.1" height="20"/>
+<rect class="task" x="396.9" y="165" width="12.3" height="20"/>
+<rect class="task" x="390.8" y="133" width="19.7" height="20"/>
+<rect class="task" x="275.6" y="261" width="142.0" height="20"/>
+<rect class="task" x="409.3" y="165" width="12.4" height="20"/>
+<rect class="task" x="410.5" y="133" width="19.9" height="20"/>
+<rect class="task" x="421.8" y="165" width="12.6" height="20"/>
+<rect class="task" x="407.5" y="229" width="27.2" height="20"/>
+<rect class="task" x="376.9" y="101" width="60.5" height="20"/>
+<rect class="task" x="403.5" y="197" width="35.3" height="20"/>
+<rect class="task" x="434.4" y="165" width="12.7" height="20"/>
+<rect class="task" x="430.4" y="133" width="20.0" height="20"/>
+<rect class="task" x="434.7" y="229" width="27.4" height="20"/>
+<rect class="task" x="447.2" y="165" width="15.6" height="20"/>
+<rect class="task" x="450.4" y="133" width="20.1" height="20"/>
+<rect class="task" x="462.8" y="165" width="13.0" height="20"/>
+<rect class="task" x="438.8" y="197" width="37.2" height="20"/>
+<rect class="task" x="475.8" y="165" width="13.2" height="20"/>
+<rect class="task" x="462.1" y="229" width="27.5" height="20"/>
+<rect class="task" x="470.5" y="133" width="20.2" height="20"/>
+<rect class="task" x="437.5" y="101" width="59.9" height="20"/>
+<rect class="task" x="489.0" y="165" width="13.3" height="20"/>
+<rect class="task" x="490.8" y="133" width="20.4" height="20"/>
+<rect class="task" x="476.1" y="197" width="35.6" height="20"/>
+<rect class="task" x="502.3" y="165" width="13.5" height="20"/>
+<rect class="task" x="489.6" y="229" width="27.6" height="20"/>
+<rect class="task" x="515.8" y="165" width="13.6" height="20"/>
+<rect class="task" x="417.7" y="261" width="113.1" height="20"/>
+<rect class="task" x="511.3" y="133" width="20.5" height="20"/>
+<rect class="task" x="529.4" y="165" width="13.7" height="20"/>
+<rect class="task" x="517.2" y="229" width="27.8" height="20"/>
+<rect class="task" x="511.7" y="197" width="35.7" height="20"/>
+<rect class="task" x="531.8" y="133" width="20.9" height="20"/>
+<rect class="task" x="543.2" y="165" width="13.9" height="20"/>
+<rect class="task" x="497.5" y="101" width="60.1" height="20"/>
+<rect class="task" x="557.1" y="165" width="14.0" height="20"/>
+<rect class="task" x="545.0" y="229" width="27.9" height="20"/>
+<rect class="task" x="552.7" y="133" width="20.8" height="20"/>
+<rect class="task" x="547.4" y="197" width="35.9" height="20"/>
+<rect class="task" x="571.1" y="165" width="14.1" height="20"/>
+<rect class="task" x="573.6" y="133" width="21.0" height="20"/>
+<rect class="task" x="585.2" y="165" width="14.3" height="20"/>
+<rect class="task" x="573.0" y="229" width="28.1" height="20"/>
+<rect class="task" x="599.6" y="165" width="14.4" height="20"/>
+<rect class="task" x="594.6" y="133" width="22.9" height="20"/>
+<rect class="task" x="557.6" y="101" width="60.3" height="20"/>
+<rect class="task" x="583.3" y="197" width="36.0" height="20"/>
+<rect class="task" x="614.0" y="165" width="14.6" height="20"/>
+<rect class="task" x="601.0" y="229" width="28.2" height="20"/>
+<rect class="task" x="617.5" y="133" width="21.3" height="20"/>
+<rect class="task" x="628.6" y="165" width="14.7" height="20"/>
+<rect class="task" x="530.8" y="261" width="113.1" height="20"/>
+<rect class="task" x="619.3" y="197" width="36.2" height="20"/>
+<rect class="task" x="629.3" y="229" width="28.3" height="20"/>
+<rect class="task" x="643.3" y="165" width="15.0" height="20"/>
+<rect class="task" x="638.8" y="133" width="21.6" height="20"/>
+<rect class="task" x="658.4" y="165" width="15.0" height="20"/>
+<rect class="task" x="660.5" y="133" width="21.5" height="20"/>
+<rect class="task" x="617.9" y="101" width="64.8" height="20"/>
+<rect class="task" x="657.7" y="229" width="28.7" height="20"/>
+<rect class="task" x="673.4" y="165" width="15.1" height="20"/>
+<rect class="task" x="655.5" y="197" width="36.4" height="20"/>
+<rect class="task" x="682.0" y="133" width="21.8" height="20"/>
+<rect class="task" x="688.6" y="165" width="15.4" height="20"/>
+<rect class="task" x="686.4" y="229" width="28.8" height="20"/>
+<rect class="task" x="704.0" y="165" width="15.4" height="20"/>
+<rect class="task" x="666.9" y="69" width="55.3" height="20"/>
+<rect class="task" x="703.9" y="133" width="21.8" height="20"/>
+<rect class="task" x="692.0" y="197" width="36.6" height="20"/>
+<rect class="task" x="719.5" y="165" width="15.5" height="20"/>
+<rect class="task" x="682.9" y="101" width="60.9" height="20"/>
+<rect class="task" x="715.2" y="229" width="28.8" height="20"/>
+<rect class="task" x="725.8" y="133" width="21.9" height="20"/>
+<rect class="task" x="735.0" y="165" width="15.7" height="20"/>
+<rect class="task" x="644.0" y="261" width="113.7" height="20"/>
+<rect class="task" x="728.6" y="197" width="36.6" height="20"/>
+<rect class="task" x="750.7" y="165" width="15.8" height="20"/>
+<rect class="task" x="694.7" y="37" width="72.5" height="20"/>
+<rect class="task" x="747.7" y="133" width="22.1" height="20"/>
+<rect class="task" x="744.0" y="229" width="28.9" height="20"/>
+<rect class="task" x="722.8" y="69" width="53.6" height="20"/>
+<rect class="task" x="766.6" y="165" width="16.0" height="20"/>
+<rect class="task" x="769.8" y="133" width="22.2" height="20"/>
+<rect class="task" x="782.6" y="165" width="16.1" height="20"/>
+<rect class="task" x="765.3" y="197" width="36.7" height="20"/>
+<rect class="task" x="772.9" y="229" width="29.0" height="20"/>
+<rect class="task" x="743.9" y="101" width="60.8" height="20"/>
+<rect class="task" x="792.0" y="133" width="22.4" height="20"/>
+<rect class="task" x="798.7" y="165" width="16.2" height="20"/>
+<rect class="task" x="802.0" y="229" width="29.0" height="20"/>
+<rect class="task" x="815.0" y="165" width="16.4" height="20"/>
+<rect class="task" x="776.4" y="69" width="55.0" height="20"/>
+<rect class="task" x="814.4" y="133" width="22.5" height="20"/>
+<rect class="task" x="802.0" y="197" width="36.8" height="20"/>
+<rect class="task" x="831.3" y="165" width="16.5" height="20"/>
+<rect class="task" x="767.9" y="37" width="86.8" height="20"/>
+<rect class="task" x="837.0" y="133" width="22.6" height="20"/>
+<rect class="task" x="831.0" y="229" width="30.0" height="20"/>
+<rect class="task" x="847.9" y="165" width="16.6" height="20"/>
+<rect class="task" x="804.7" y="101" width="61.0" height="20"/>
+<rect class="task" x="757.7" y="261" width="114.7" height="20"/>
+<rect class="task" x="838.9" y="197" width="37.9" height="20"/>
+<rect class="task" x="864.6" y="165" width="16.8" height="20"/>
+<rect class="task" x="859.6" y="133" width="22.7" height="20"/>
+<rect class="task" x="831.4" y="69" width="53.8" height="20"/>
+<rect class="task" x="881.4" y="165" width="16.9" height="20"/>
+<rect class="task" x="882.4" y="133" width="22.9" height="20"/>
+<rect class="task" x="876.8" y="197" width="37.1" height="20"/>
+<rect class="task" x="898.3" y="165" width="17.1" height="20"/>
+<rect class="task" x="865.8" y="101" width="61.2" height="20"/>
+<rect class="task" x="905.3" y="133" width="23.0" height="20"/>
+<rect class="task" x="861.1" y="229" width="67.7" height="20"/>
+<rect class="task" x="915.4" y="165" width="18.4" height="20"/>
+<rect class="task" x="854.9" y="37" width="81.7" height="20"/>
+<rect class="task" x="885.3" y="69" width="54.0" height="20"/>
+<rect class="task" x="933.9" y="165" width="10.1" height="20"/>
+<rect class="task" x="914.0" y="197" width="30.0" height="20"/>
+<rect class="task" x="928.8" y="229" width="15.2" height="20"/>
+<rect class="task" x="928.4" y="133" width="15.6" height="20"/>
+<rect class="task" x="872.5" y="261" width="71.5" height="20"/>
+<rect class="task" x="927.0" y="101" width="17.0" height="20"/>
+<rect class="task" x="939.3" y="69" width="4.7" height="20"/>
+<rect class="task" x="936.7" y="37" width="7.3" height="20"/>
+<line class="mark" x1="695.7" y1="32" x2="695.7" y2="62"/>
+<text class="mt" x="699.7" y="51">2.88</text>
+<line class="mark" x1="667.5" y1="64" x2="667.5" y2="94"/>
+<text class="mt" x="671.5" y="83">2.75</text>
+<line class="mark" x1="266.7" y1="96" x2="266.7" y2="126"/>
+<text class="mt" x="270.7" y="115">0.95</text>
+<line class="mark" x1="226.4" y1="128" x2="226.4" y2="158"/>
+<text class="mt" x="230.4" y="147">0.77</text>
+<line class="mark" x1="206.7" y1="160" x2="206.7" y2="190"/>
+<text class="mt" x="210.7" y="179">0.68</text>
+<line class="mark" x1="70.6" y1="192" x2="70.6" y2="222"/>
+<text class="mt" x="74.6" y="211">0.07</text>
+<line class="mark" x1="64.9" y1="224" x2="64.9" y2="254"/>
+<text class="mt" x="68.9" y="243">0.04</text>
+<line class="mark" x1="275.7" y1="256" x2="275.7" y2="286"/>
+<text class="mt" x="279.7" y="275">0.99</text>
+<rect class="main" x="56.0" y="330" width="14" height="12"/>
+<text class="lbl" x="76.0" y="340">main создает горутины</text>
+<rect class="task" x="257.5" y="330" width="14" height="12"/>
+<text class="lbl" x="277.5" y="340">задачи</text>
+<rect class="rt" x="346.5" y="330" width="14" height="12"/>
+<text class="lbl" x="366.5" y="340">горутины runtime</text>
+<line class="mark" x1="517.5" y1="328" x2="517.5" y2="342"/>
+<text class="lbl" x="530.5" y="340">первая задача на P, мс</text>
+</svg>

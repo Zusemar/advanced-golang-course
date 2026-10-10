@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="diagram" viewBox="0 0 960 346" width="960" height="346" role="img" aria-label="t1: конец шага">
+<style>
+.diagram {
+  --bg: #fbfaf7; --fg: #1d1d1b; --muted: #6b6a66; --rule: #dcd9d1;
+  --accent: #0b6e8a; --code-bg: #f1efe9; --warn: #a3431b; --rt: #b9b6ad;
+}
+@media (prefers-color-scheme: dark) { .diagram {
+  --bg: #161615; --fg: #ecebe6; --muted: #9b9a94; --rule: #3a3936;
+  --accent: #5cc3dd; --code-bg: #22211f; --warn: #ef8a5c; --rt: #5d5b56;
+} }
+.diagram { font-family: system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+.diagram .bgr { fill: var(--bg); }
+.diagram text { fill: var(--fg); font-size: 15px; }
+.diagram .lbl { fill: var(--muted); font-size: 13px; }
+.diagram .ttl { fill: var(--accent); font-size: 17px; font-weight: 700; }
+.diagram .row { fill: var(--code-bg); }
+.diagram .grid { stroke: var(--rule); stroke-width: 1; }
+.diagram .task { fill: var(--accent); }
+.diagram .main { fill: var(--warn); }
+.diagram .rt { fill: var(--rt); }
+.diagram .idle { fill: var(--warn); opacity: 0.18; }
+.diagram .mark { stroke: var(--fg); stroke-width: 2; }
+.diagram .mt { fill: var(--fg); font-size: 12px; font-weight: 600; }
+</style>
+<rect class="bgr" width="960" height="346"/>
+<text class="ttl" x="56" y="22">t1: конец шага</text>
+<line class="grid" x1="56.0" y1="30" x2="56.0" y2="290"/>
+<text class="lbl" x="56.0" y="306" text-anchor="middle">-1</text>
+<line class="grid" x1="144.8" y1="30" x2="144.8" y2="290"/>
+<text class="lbl" x="144.8" y="306" text-anchor="middle">-0.9</text>
+<line class="grid" x1="233.6" y1="30" x2="233.6" y2="290"/>
+<text class="lbl" x="233.6" y="306" text-anchor="middle">-0.8</text>
+<line class="grid" x1="322.4" y1="30" x2="322.4" y2="290"/>
+<text class="lbl" x="322.4" y="306" text-anchor="middle">-0.7</text>
+<line class="grid" x1="411.2" y1="30" x2="411.2" y2="290"/>
+<text class="lbl" x="411.2" y="306" text-anchor="middle">-0.6</text>
+<line class="grid" x1="500.0" y1="30" x2="500.0" y2="290"/>
+<text class="lbl" x="500.0" y="306" text-anchor="middle">-0.5</text>
+<line class="grid" x1="588.8" y1="30" x2="588.8" y2="290"/>
+<text class="lbl" x="588.8" y="306" text-anchor="middle">-0.4</text>
+<line class="grid" x1="677.6" y1="30" x2="677.6" y2="290"/>
+<text class="lbl" x="677.6" y="306" text-anchor="middle">-0.3</text>
+<line class="grid" x1="766.4" y1="30" x2="766.4" y2="290"/>
+<text class="lbl" x="766.4" y="306" text-anchor="middle">-0.2</text>
+<line class="grid" x1="855.2" y1="30" x2="855.2" y2="290"/>
+<text class="lbl" x="855.2" y="306" text-anchor="middle">-0.1</text>
+<line class="grid" x1="944.0" y1="30" x2="944.0" y2="290"/>
+<text class="lbl" x="944.0" y="306" text-anchor="middle">0</text>
+<text class="lbl" x="500.0" y="324" text-anchor="middle">мс до конца шага</text>
+<text class="lbl" x="48" y="52" text-anchor="end">P0</text>
+<rect class="row" x="56" y="34" width="888.0" height="26"/>
+<rect class="idle" x="597.3" y="34" width="346.7" height="26"/>
+<text class="lbl" x="48" y="84" text-anchor="end">P1</text>
+<rect class="row" x="56" y="66" width="888.0" height="26"/>
+<rect class="idle" x="520.7" y="66" width="423.3" height="26"/>
+<text class="lbl" x="48" y="116" text-anchor="end">P2</text>
+<rect class="row" x="56" y="98" width="888.0" height="26"/>
+<rect class="idle" x="750.8" y="98" width="193.2" height="26"/>
+<text class="lbl" x="48" y="148" text-anchor="end">P3</text>
+<rect class="row" x="56" y="130" width="888.0" height="26"/>
+<rect class="idle" x="811.3" y="130" width="132.7" height="26"/>
+<text class="lbl" x="48" y="180" text-anchor="end">P4</text>
+<rect class="row" x="56" y="162" width="888.0" height="26"/>
+<rect class="idle" x="915.8" y="162" width="28.2" height="26"/>
+<text class="lbl" x="48" y="212" text-anchor="end">P5</text>
+<rect class="row" x="56" y="194" width="888.0" height="26"/>
+<rect class="idle" x="537.3" y="194" width="406.7" height="26"/>
+<text class="lbl" x="48" y="244" text-anchor="end">P6</text>
+<rect class="row" x="56" y="226" width="888.0" height="26"/>
+<rect class="idle" x="351.0" y="226" width="593.0" height="26"/>
+<text class="lbl" x="48" y="276" text-anchor="end">P7</text>
+<rect class="row" x="56" y="258" width="888.0" height="26"/>
+<rect class="idle" x="311.6" y="258" width="632.4" height="26"/>
+<rect class="task" x="56.0" y="101" width="37.0" height="20"/>
+<rect class="task" x="56.0" y="37" width="45.5" height="20"/>
+<rect class="task" x="56.0" y="165" width="60.1" height="20"/>
+<rect class="task" x="56.0" y="133" width="218.6" height="20"/>
+<rect class="task" x="56.0" y="261" width="255.9" height="20"/>
+<rect class="task" x="56.0" y="229" width="295.1" height="20"/>
+<rect class="task" x="56.0" y="69" width="464.9" height="20"/>
+<rect class="task" x="56.0" y="197" width="481.9" height="20"/>
+<rect class="task" x="101.9" y="37" width="495.6" height="20"/>
+<rect class="task" x="94.1" y="101" width="657.1" height="20"/>
+<rect class="task" x="275.9" y="133" width="535.5" height="20"/>
+<rect class="task" x="118.0" y="165" width="823.5" height="20"/>
+<rect class="main" x="942.6" y="165" width="1.4" height="20"/>
+<rect class="task" x="56.0" y="330" width="14" height="12"/>
+<text class="lbl" x="76.0" y="340">задачи</text>
+<rect class="rt" x="145.0" y="330" width="14" height="12"/>
+<text class="lbl" x="165.0" y="340">горутины runtime</text>
+<rect class="idle" x="309.0" y="330" width="14" height="12"/>
+<text class="lbl" x="329.0" y="340">P свободен, задач не осталось</text>
+</svg>

@@ -8,6 +8,8 @@ bin/
 *.out
 *.prof
 *.trace
+# ...except the traces a correction page is drawn from
+!week-*/practice/corrections/assets/*.out
 
 # Editors
 .idea/
