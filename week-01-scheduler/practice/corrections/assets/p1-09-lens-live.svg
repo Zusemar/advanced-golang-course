@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="diagram" viewBox="0 0 960 346" width="960" height="346" role="img" aria-label="Живой трейс шага 3: длина каждого отрезка до вытеснения, мс">
+<style>
+.diagram {
+  --bg: #fbfaf7; --fg: #1d1d1b; --muted: #6b6a66; --rule: #dcd9d1;
+  --accent: #0b6e8a; --code-bg: #f1efe9; --warn: #a3431b; --rt: #b9b6ad;
+}
+@media (prefers-color-scheme: dark) { .diagram {
+  --bg: #161615; --fg: #ecebe6; --muted: #9b9a94; --rule: #3a3936;
+  --accent: #5cc3dd; --code-bg: #22211f; --warn: #ef8a5c; --rt: #5d5b56;
+} }
+.diagram { font-family: system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+.diagram .bgr { fill: var(--bg); }
+.diagram text { fill: var(--fg); font-size: 15px; }
+.diagram .lbl { fill: var(--muted); font-size: 13px; }
+.diagram .ttl { fill: var(--accent); font-size: 17px; font-weight: 700; }
+.diagram .row { fill: var(--code-bg); }
+.diagram .grid { stroke: var(--rule); stroke-width: 1; }
+.diagram .task { fill: var(--accent); }
+.diagram .main { fill: var(--warn); }
+.diagram .rt { fill: var(--rt); }
+.diagram .idle { fill: var(--warn); opacity: 0.18; }
+.diagram .mark { stroke: var(--fg); stroke-width: 2; }
+.diagram .mt { fill: var(--fg); font-size: 12px; font-weight: 600; }
+.diagram .gid { fill: var(--bg); font-size: 12px; font-weight: 600; }
+.diagram .pre { fill: var(--warn); stroke: var(--bg); stroke-width: 1; }
+.diagram .wait { fill: none; stroke: var(--warn); stroke-width: 2; }
+.diagram .free { fill: var(--muted); opacity: 0.35; }
+.diagram .steal { stroke: var(--fg); stroke-width: 1.5; stroke-dasharray: 3 2; }
+.diagram .sh { fill: var(--fg); }
+</style>
+<rect class="bgr" width="960" height="346"/>
+<text class="ttl" x="56" y="22">Живой трейс шага 3: длина каждого отрезка до вытеснения, мс</text>
+<line class="grid" x1="56.0" y1="30" x2="56.0" y2="290"/>
+<text class="lbl" x="56.0" y="306" text-anchor="middle">0</text>
+<line class="grid" x1="181.1" y1="30" x2="181.1" y2="290"/>
+<text class="lbl" x="181.1" y="306" text-anchor="middle">10</text>
+<line class="grid" x1="306.1" y1="30" x2="306.1" y2="290"/>
+<text class="lbl" x="306.1" y="306" text-anchor="middle">20</text>
+<line class="grid" x1="431.2" y1="30" x2="431.2" y2="290"/>
+<text class="lbl" x="431.2" y="306" text-anchor="middle">30</text>
+<line class="grid" x1="556.3" y1="30" x2="556.3" y2="290"/>
+<text class="lbl" x="556.3" y="306" text-anchor="middle">40</text>
+<line class="grid" x1="681.4" y1="30" x2="681.4" y2="290"/>
+<text class="lbl" x="681.4" y="306" text-anchor="middle">50</text>
+<line class="grid" x1="806.4" y1="30" x2="806.4" y2="290"/>
+<text class="lbl" x="806.4" y="306" text-anchor="middle">60</text>
+<line class="grid" x1="931.5" y1="30" x2="931.5" y2="290"/>
+<text class="lbl" x="931.5" y="306" text-anchor="middle">70</text>
+<text class="lbl" x="500.0" y="324" text-anchor="middle">мс от начала шага</text>
+<text class="lbl" x="48" y="52" text-anchor="end">P0</text>
+<rect class="row" x="56" y="34" width="888.0" height="26"/>
+<text class="lbl" x="48" y="84" text-anchor="end">P1</text>
+<rect class="row" x="56" y="66" width="888.0" height="26"/>
+<text class="lbl" x="48" y="116" text-anchor="end">P2</text>
+<rect class="row" x="56" y="98" width="888.0" height="26"/>
+<text class="lbl" x="48" y="148" text-anchor="end">P3</text>
+<rect class="row" x="56" y="130" width="888.0" height="26"/>
+<text class="lbl" x="48" y="180" text-anchor="end">P4</text>
+<rect class="row" x="56" y="162" width="888.0" height="26"/>
+<text class="lbl" x="48" y="212" text-anchor="end">P5</text>
+<rect class="row" x="56" y="194" width="888.0" height="26"/>
+<text class="lbl" x="48" y="244" text-anchor="end">P6</text>
+<rect class="row" x="56" y="226" width="888.0" height="26"/>
+<text class="lbl" x="48" y="276" text-anchor="end">P7</text>
+<rect class="row" x="56" y="258" width="888.0" height="26"/>
+<rect class="main" x="56.0" y="37" width="0.6" height="20"/>
+<rect class="rt" x="100.1" y="165" width="0.6" height="20"/>
+<rect class="rt" x="100.3" y="165" width="0.6" height="20"/>
+<rect class="rt" x="100.3" y="165" width="0.6" height="20"/>
+<rect class="rt" x="102.2" y="133" width="0.6" height="20"/>
+<rect class="rt" x="109.8" y="101" width="0.6" height="20"/>
+<rect class="rt" x="110.2" y="101" width="0.6" height="20"/>
+<rect class="rt" x="110.2" y="101" width="0.6" height="20"/>
+<rect class="task" x="56.6" y="261" width="59.0" height="20"/>
+<text class="gid" x="60.6" y="276">G10</text>
+<rect class="task" x="56.1" y="37" width="125.6" height="20"/>
+<text class="gid" x="60.1" y="52">G17</text>
+<path class="pre" d="M181.7 36 l-6 -9 h12 z"/>
+<text class="gid" x="173.7" y="52" text-anchor="end">10.04</text>
+<rect class="task" x="110.4" y="69" width="132.2" height="20"/>
+<text class="gid" x="114.4" y="84">G14</text>
+<path class="pre" d="M242.6 68 l-6 -9 h12 z"/>
+<text class="gid" x="234.6" y="84" text-anchor="end">10.57</text>
+<rect class="task" x="110.2" y="101" width="132.4" height="20"/>
+<text class="gid" x="114.2" y="116">G16</text>
+<path class="pre" d="M242.6 100 l-6 -9 h12 z"/>
+<text class="gid" x="234.6" y="116" text-anchor="end">10.58</text>
+<rect class="task" x="102.3" y="133" width="140.3" height="20"/>
+<text class="gid" x="106.3" y="148">G12</text>
+<path class="pre" d="M242.6 132 l-6 -9 h12 z"/>
+<text class="gid" x="234.6" y="148" text-anchor="end">11.22</text>
+<rect class="task" x="100.3" y="165" width="142.3" height="20"/>
+<text class="gid" x="104.3" y="180">G15</text>
+<path class="pre" d="M242.6 164 l-6 -9 h12 z"/>
+<text class="gid" x="234.6" y="180" text-anchor="end">11.38</text>
+<rect class="task" x="60.8" y="229" width="182.0" height="20"/>
+<text class="gid" x="64.8" y="244">G13</text>
+<path class="pre" d="M242.8 228 l-6 -9 h12 z"/>
+<text class="gid" x="234.8" y="244" text-anchor="end">14.55</text>
+<rect class="task" x="78.0" y="197" width="165.0" height="20"/>
+<text class="gid" x="82.0" y="212">G11</text>
+<path class="pre" d="M243.0 196 l-6 -9 h12 z"/>
+<text class="gid" x="235.0" y="212" text-anchor="end">13.19</text>
+<rect class="task" x="243.1" y="197" width="26.2" height="20"/>
+<rect class="task" x="242.6" y="133" width="150.8" height="20"/>
+<text class="gid" x="246.6" y="148">G12</text>
+<rect class="task" x="182.1" y="37" width="251.4" height="20"/>
+<text class="gid" x="186.1" y="52">G17</text>
+<path class="pre" d="M433.5 36 l-6 -9 h12 z"/>
+<text class="gid" x="425.5" y="52" text-anchor="end">20.10</text>
+<rect class="task" x="242.6" y="101" width="190.9" height="20"/>
+<text class="gid" x="246.6" y="116">G14</text>
+<path class="pre" d="M433.5 100 l-6 -9 h12 z"/>
+<text class="gid" x="425.5" y="116" text-anchor="end">15.26</text>
+<rect class="task" x="242.8" y="69" width="190.8" height="20"/>
+<text class="gid" x="246.8" y="84">G15</text>
+<path class="pre" d="M433.5 68 l-6 -9 h12 z"/>
+<text class="gid" x="425.5" y="84" text-anchor="end">15.25</text>
+<rect class="task" x="242.6" y="165" width="190.9" height="20"/>
+<text class="gid" x="246.6" y="180">G16</text>
+<path class="pre" d="M433.6 164 l-6 -9 h12 z"/>
+<text class="gid" x="425.6" y="180" text-anchor="end">15.26</text>
+<rect class="task" x="242.8" y="229" width="190.8" height="20"/>
+<text class="gid" x="246.8" y="244">G13</text>
+<path class="pre" d="M433.6 228 l-6 -9 h12 z"/>
+<text class="gid" x="425.6" y="244" text-anchor="end">15.26</text>
+<rect class="task" x="433.7" y="37" width="68.2" height="20"/>
+<text class="gid" x="437.7" y="52">G13</text>
+<rect class="task" x="433.6" y="165" width="218.2" height="20"/>
+<text class="gid" x="437.6" y="180">G14</text>
+<rect class="task" x="433.6" y="69" width="251.5" height="20"/>
+<text class="gid" x="437.6" y="84">G15</text>
+<path class="pre" d="M685.0 68 l-6 -9 h12 z"/>
+<text class="gid" x="677.0" y="84" text-anchor="end">20.11</text>
+<rect class="task" x="433.6" y="229" width="251.4" height="20"/>
+<text class="gid" x="437.6" y="244">G16</text>
+<path class="pre" d="M685.0 228 l-6 -9 h12 z"/>
+<text class="gid" x="677.0" y="244" text-anchor="end">20.10</text>
+<rect class="task" x="433.5" y="101" width="251.5" height="20"/>
+<text class="gid" x="437.5" y="116">G17</text>
+<path class="pre" d="M685.0 100 l-6 -9 h12 z"/>
+<text class="gid" x="677.0" y="116" text-anchor="end">20.11</text>
+<rect class="task" x="685.2" y="229" width="64.7" height="20"/>
+<text class="gid" x="689.2" y="244">G15</text>
+<rect class="task" x="685.1" y="101" width="175.9" height="20"/>
+<text class="gid" x="689.1" y="116">G16</text>
+<rect class="task" x="685.1" y="69" width="250.7" height="20"/>
+<text class="gid" x="689.1" y="84">G17</text>
+<rect class="main" x="935.8" y="69" width="0.6" height="20"/>
+<rect class="task" x="56.0" y="330" width="14" height="12"/>
+<text class="lbl" x="76.0" y="340">задачи</text>
+<rect class="rt" x="145.0" y="330" width="14" height="12"/>
+<text class="lbl" x="165.0" y="340">горутины runtime</text>
+<path class="pre" d="M316.0 341 l-6 -9 h12 z"/>
+<text class="lbl" x="329.0" y="340">вытеснение: G уходит в глобальную очередь</text>
+</svg>
