@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="diagram" viewBox="0 0 960 250" width="960" height="250" role="img" aria-label="Демо 8: 16 разных каналов 481 нс, из них около 267 сортировка и 151 локи; один канал 131 нс">
+<style>
+.diagram {
+  --bg: #fbfaf7; --fg: #1d1d1b; --muted: #6b6a66; --rule: #dcd9d1;
+  --accent: #0b6e8a; --base: #8a877f; --lock: #2a78d6; --sort: #eb6834;
+}
+@media (prefers-color-scheme: dark) { .diagram {
+  --bg: #161615; --fg: #ecebe6; --muted: #9b9a94; --rule: #3a3936;
+  --accent: #5cc3dd; --base: #6b6964; --lock: #3987e5; --sort: #d95926;
+} }
+.diagram { font-family: system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+.diagram .bgr { fill: var(--bg); }
+.diagram text { fill: var(--fg); font-size: 15px; }
+.diagram .lbl { fill: var(--muted); font-size: 13px; }
+.diagram .ttl { fill: var(--accent); font-size: 17px; font-weight: 700; }
+.diagram .grid { stroke: var(--rule); stroke-width: 1; }
+.diagram .base { fill: var(--base); }
+.diagram .lock { fill: var(--lock); }
+.diagram .sort { fill: var(--sort); }
+.diagram .in { fill: #ffffff; font-size: 14px; font-weight: 600; }
+.diagram .line { stroke: var(--accent); stroke-width: 2; fill: none; }
+.diagram .dot { fill: var(--accent); stroke: var(--bg); stroke-width: 2; }
+.diagram .gap { stroke: var(--bg); stroke-width: 2; }
+</style>
+<rect class="bgr" width="960" height="250"/>
+<text class="ttl" x="24" y="30">Демо 8: из чего складывается время одного select, нс</text>
+<line class="grid" x1="210.0" y1="48" x2="210.0" y2="168"/>
+<text class="lbl" x="210.0" y="186" text-anchor="middle">0</text>
+<line class="grid" x1="334.0" y1="48" x2="334.0" y2="168"/>
+<text class="lbl" x="334.0" y="186" text-anchor="middle">100</text>
+<line class="grid" x1="458.0" y1="48" x2="458.0" y2="168"/>
+<text class="lbl" x="458.0" y="186" text-anchor="middle">200</text>
+<line class="grid" x1="582.0" y1="48" x2="582.0" y2="168"/>
+<text class="lbl" x="582.0" y="186" text-anchor="middle">300</text>
+<line class="grid" x1="706.0" y1="48" x2="706.0" y2="168"/>
+<text class="lbl" x="706.0" y="186" text-anchor="middle">400</text>
+<line class="grid" x1="830.0" y1="48" x2="830.0" y2="168"/>
+<text class="lbl" x="830.0" y="186" text-anchor="middle">500</text>
+<text x="198" y="85" text-anchor="end">16 разных каналов</text>
+<rect class="base" x="210.0" y="60" width="77.9" height="38" rx="4"/>
+<text class="in" x="248.9" y="84" text-anchor="middle">63</text>
+<line class="gap" x1="287.9" y1="60" x2="287.9" y2="98"/>
+<rect class="lock" x="287.9" y="60" width="187.5" height="38" rx="4"/>
+<text class="in" x="381.6" y="84" text-anchor="middle">151</text>
+<line class="gap" x1="475.4" y1="60" x2="475.4" y2="98"/>
+<rect class="sort" x="475.4" y="60" width="330.6" height="38" rx="4"/>
+<text class="in" x="640.7" y="84" text-anchor="middle">267</text>
+<line class="gap" x1="805.9" y1="60" x2="805.9" y2="98"/>
+<text x="815.9" y="85" font-weight="700">481</text>
+<text x="198" y="141" text-anchor="end">1 канал в 16 case</text>
+<rect class="base" x="210.0" y="116" width="59.8" height="38" rx="4"/>
+<text class="in" x="239.9" y="140" text-anchor="middle">48</text>
+<line class="gap" x1="269.8" y1="116" x2="269.8" y2="154"/>
+<rect class="lock" x="269.8" y="116" width="27.5" height="38" rx="4"/>
+<line class="gap" x1="297.3" y1="116" x2="297.3" y2="154"/>
+<rect class="sort" x="297.3" y="116" width="74.6" height="38" rx="4"/>
+<text class="in" x="334.6" y="140" text-anchor="middle">60</text>
+<line class="gap" x1="371.9" y1="116" x2="371.9" y2="154"/>
+<text x="381.9" y="141" font-weight="700">131</text>
+<text class="lbl" x="423.9" y="141">(48 + 22 + 60)</text>
+<rect class="base" x="24" y="204" width="14" height="14" rx="3"/>
+<text x="44" y="216">остальное: отправка, перемешивание, проход 1</text>
+<rect class="lock" x="462.4" y="204" width="14" height="14" rx="3"/>
+<text x="482.4" y="216">sellock / selunlock</text>
+<rect class="sort" x="685.8" y="204" width="14" height="14" rx="3"/>
+<text x="705.8" y="216">сортировка lockorder</text>
+<text class="lbl" x="24" y="240">Медианы 10 чередующихся прогонов сборок select.go без локов, без сортировки и без обоих. i5-13600KF, WSL2, go1.27.1, 15.10.2026</text>
+</svg>

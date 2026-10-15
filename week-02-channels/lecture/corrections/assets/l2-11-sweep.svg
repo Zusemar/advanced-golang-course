@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="diagram" viewBox="0 0 960 344" width="960" height="344" role="img" aria-label="16 case на k разных каналах: 139, 211, 306, 384, 501 нс для k = 1, 2, 4, 8, 16">
+<style>
+.diagram {
+  --bg: #fbfaf7; --fg: #1d1d1b; --muted: #6b6a66; --rule: #dcd9d1;
+  --accent: #0b6e8a; --base: #8a877f; --lock: #2a78d6; --sort: #eb6834;
+}
+@media (prefers-color-scheme: dark) { .diagram {
+  --bg: #161615; --fg: #ecebe6; --muted: #9b9a94; --rule: #3a3936;
+  --accent: #5cc3dd; --base: #6b6964; --lock: #3987e5; --sort: #d95926;
+} }
+.diagram { font-family: system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+.diagram .bgr { fill: var(--bg); }
+.diagram text { fill: var(--fg); font-size: 15px; }
+.diagram .lbl { fill: var(--muted); font-size: 13px; }
+.diagram .ttl { fill: var(--accent); font-size: 17px; font-weight: 700; }
+.diagram .grid { stroke: var(--rule); stroke-width: 1; }
+.diagram .base { fill: var(--base); }
+.diagram .lock { fill: var(--lock); }
+.diagram .sort { fill: var(--sort); }
+.diagram .in { fill: #ffffff; font-size: 14px; font-weight: 600; }
+.diagram .line { stroke: var(--accent); stroke-width: 2; fill: none; }
+.diagram .dot { fill: var(--accent); stroke: var(--bg); stroke-width: 2; }
+.diagram .gap { stroke: var(--bg); stroke-width: 2; }
+</style>
+<rect class="bgr" width="960" height="344"/>
+<text class="ttl" x="24" y="30">16 case на k разных каналах: время одного select, нс</text>
+<line class="grid" x1="70" y1="270.0" x2="920" y2="270.0"/>
+<text class="lbl" x="62" y="274.0" text-anchor="end">0</text>
+<line class="grid" x1="70" y1="231.8" x2="920" y2="231.8"/>
+<text class="lbl" x="62" y="235.8" text-anchor="end">100</text>
+<line class="grid" x1="70" y1="193.6" x2="920" y2="193.6"/>
+<text class="lbl" x="62" y="197.6" text-anchor="end">200</text>
+<line class="grid" x1="70" y1="155.5" x2="920" y2="155.5"/>
+<text class="lbl" x="62" y="159.5" text-anchor="end">300</text>
+<line class="grid" x1="70" y1="117.3" x2="920" y2="117.3"/>
+<text class="lbl" x="62" y="121.3" text-anchor="end">400</text>
+<line class="grid" x1="70" y1="79.1" x2="920" y2="79.1"/>
+<text class="lbl" x="62" y="83.1" text-anchor="end">500</text>
+<text class="lbl" x="90.0" y="292" text-anchor="middle">k = 1</text>
+<text class="lbl" x="292.5" y="292" text-anchor="middle">k = 2</text>
+<text class="lbl" x="495.0" y="292" text-anchor="middle">k = 4</text>
+<text class="lbl" x="697.5" y="292" text-anchor="middle">k = 8</text>
+<text class="lbl" x="900.0" y="292" text-anchor="middle">k = 16</text>
+<path class="line" d="M90.0,217.0 L292.5,189.4 L495.0,153.0 L697.5,123.3 L900.0,78.8"/>
+<text class="lbl" x="191.2" y="229.2" text-anchor="middle">+72 на канал</text>
+<text class="lbl" x="393.8" y="197.2" text-anchor="middle">+48 на канал</text>
+<text class="lbl" x="596.2" y="164.2" text-anchor="middle">+19 на канал</text>
+<text class="lbl" x="798.8" y="127.1" text-anchor="middle">+15 на канал</text>
+<circle class="dot" cx="90.0" cy="217.0" r="6"/>
+<text x="90.0" y="203.0" text-anchor="middle" font-weight="700">139</text>
+<circle class="dot" cx="292.5" cy="189.4" r="6"/>
+<text x="292.5" y="175.4" text-anchor="middle" font-weight="700">211</text>
+<circle class="dot" cx="495.0" cy="153.0" r="6"/>
+<text x="495.0" y="139.0" text-anchor="middle" font-weight="700">306</text>
+<circle class="dot" cx="697.5" cy="123.3" r="6"/>
+<text x="697.5" y="109.3" text-anchor="middle" font-weight="700">384</text>
+<circle class="dot" cx="900.0" cy="78.8" r="6"/>
+<text x="900.0" y="64.8" text-anchor="middle" font-weight="700">501</text>
+<text class="lbl" x="24" y="314">Медиана пяти прогонов, в каждом 41 чередующийся раунд. Ось k логарифмическая.</text>
+<text class="lbl" x="24" y="332">i5-13600KF, WSL2, go1.27.1, GOMAXPROCS=1, 15.10.2026</text>
+</svg>
