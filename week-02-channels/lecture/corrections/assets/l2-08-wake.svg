@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="diagram" viewBox="0 0 1040 743" width="1040" height="743" role="img" aria-label="Два отправителя на двух каналах одновременно будят один select. Оба снимают sudog из очереди своего канала, CAS по g.selectDone проходит у одного. Второй идет к следующему ждущему, его нет, и он сам паркуется. Select просыпается, берет локи и в проходе 3 убирает оставшиеся sudog.">
+<style>
+.diagram {
+  --bg: #fbfaf7; --fg: #1d1d1b; --muted: #6b6a66; --rule: #dcd9d1;
+  --accent: #0b6e8a; --code-bg: #f1efe9; --warn: #a3431b;
+}
+@media (prefers-color-scheme: dark) { .diagram {
+  --bg: #161615; --fg: #ecebe6; --muted: #9b9a94; --rule: #3a3936;
+  --accent: #5cc3dd; --code-bg: #22211f; --warn: #ef8a5c;
+} }
+.diagram { font-family: system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+.diagram .bgr { fill: var(--bg); }
+.diagram text { fill: var(--fg); font-size: 15px; }
+.diagram .lbl { fill: var(--muted); font-size: 13.5px; }
+.diagram .ttl { fill: var(--accent); font-size: 17px; font-weight: 700; }
+.diagram .hd { fill: var(--code-bg); stroke: var(--fg); stroke-width: 2; }
+.diagram .hdt { font-weight: 700; }
+.diagram .life { stroke: var(--rule); stroke-width: 3; }
+.diagram .park { stroke: var(--muted); stroke-width: 3; stroke-dasharray: 6 6; }
+.diagram .note { fill: var(--code-bg); stroke: var(--rule); stroke-width: 1.5; }
+.diagram .note.ok { stroke: var(--accent); stroke-width: 2; }
+.diagram .note.w { stroke: var(--warn); stroke-width: 2; }
+.diagram .note.plain { fill: var(--bg); stroke: none; }
+.diagram .chip { fill: var(--bg); stroke: var(--accent); stroke-width: 2; }
+.diagram .chipt { fill: var(--accent); font-size: 13.5px; font-weight: 700; }
+.diagram .ar { stroke: var(--fg); stroke-width: 2; fill: none; marker-end: url(#ah-fg); }
+.diagram .ar.ok { stroke: var(--accent); marker-end: url(#ah-ok); }
+.diagram .ar.w { stroke: var(--warn); marker-end: url(#ah-w); }
+.diagram .ar.d { stroke-dasharray: 7 5; }
+.diagram .ahfg { fill: var(--fg); }
+.diagram .ahok { fill: var(--accent); }
+.diagram .ahw { fill: var(--warn); }
+.diagram .okt { fill: var(--accent); font-weight: 600; }
+.diagram .wt { fill: var(--warn); font-weight: 600; }
+.diagram .x { stroke: var(--warn); stroke-width: 3; }
+</style>
+<defs><marker id="ah-fg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="ahfg" d="M0,0 L10,5 L0,10 z"/></marker><marker id="ah-ok" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="ahok" d="M0,0 L10,5 L0,10 z"/></marker><marker id="ah-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path class="ahw" d="M0,0 L10,5 L0,10 z"/></marker></defs>
+<rect class="bgr" width="1040" height="743"/>
+<text class="ttl" x="24" y="30" text-anchor="start">Два канала будят один select одновременно</text>
+<rect class="hd" x="12" y="46" width="176" height="46" rx="6"/>
+<text class="hdt" x="100" y="66" text-anchor="middle">отправитель A</text>
+<text class="lbl" x="100" y="84" text-anchor="middle">на P1</text>
+<rect class="hd" x="217" y="46" width="176" height="46" rx="6"/>
+<text class="hdt" x="305" y="66" text-anchor="middle">канал a</text>
+<text class="lbl" x="305" y="84" text-anchor="middle">lock, recvq</text>
+<rect class="hd" x="432" y="46" width="176" height="46" rx="6"/>
+<text class="hdt" x="520" y="66" text-anchor="middle">горутина с select</text>
+<text class="lbl" x="520" y="84" text-anchor="middle">g.selectDone</text>
+<rect class="hd" x="647" y="46" width="176" height="46" rx="6"/>
+<text class="hdt" x="735" y="66" text-anchor="middle">канал b</text>
+<text class="lbl" x="735" y="84" text-anchor="middle">lock, recvq</text>
+<rect class="hd" x="852" y="46" width="176" height="46" rx="6"/>
+<text class="hdt" x="940" y="66" text-anchor="middle">отправитель B</text>
+<text class="lbl" x="940" y="84" text-anchor="middle">на P2</text>
+<line class="life" x1="100" y1="92" x2="100" y2="695.2"/>
+<line class="life" x1="305" y1="92" x2="305" y2="695.2"/>
+<line class="life" x1="735" y1="92" x2="735" y2="695.2"/>
+<line class="life" x1="940" y1="92" x2="940" y2="522"/>
+<line class="park" x1="940" y1="522" x2="940" y2="695.2"/>
+<line class="life" x1="520" y1="92" x2="520" y2="202"/>
+<line class="park" x1="520" y1="202" x2="520" y2="522"/>
+<line class="life" x1="520" y1="522" x2="520" y2="695.2"/>
+<line class="ar " x1="512" y1="138" x2="315" y2="138"/>
+<text x="413.5" y="130" text-anchor="middle">проход 2: sudog sa</text>
+<line class="ar " x1="528" y1="138" x2="725" y2="138"/>
+<text x="626.5" y="130" text-anchor="middle">проход 2: sudog sb</text>
+<rect class="chip" x="287" y="190" width="36" height="24" rx="5"/>
+<text class="chipt" x="305" y="207" text-anchor="middle">sa</text>
+<rect class="chip" x="717" y="190" width="36" height="24" rx="5"/>
+<text class="chipt" x="735" y="207" text-anchor="middle">sb</text>
+<rect class="note " x="427.0" y="177.0" width="186" height="50" rx="6"/>
+<text x="520" y="198.0" text-anchor="middle">gopark:</text>
+<text x="520" y="217.0" text-anchor="middle">все локи отпущены</text>
+<line class="ar " x1="108" y1="266" x2="295" y2="266"/>
+<text x="201.5" y="258" text-anchor="middle">lock(a)</text>
+<line class="ar " x1="932" y1="266" x2="745" y2="266"/>
+<text x="838.5" y="258" text-anchor="middle">lock(b)</text>
+<rect class="note plain" x="420" y="250" width="200" height="42"/>
+<text class="lbl" x="520" y="267" text-anchor="middle">разные локи:</text>
+<text class="lbl" x="520" y="285" text-anchor="middle">A и B друг друга не ждут</text>
+<text x="319" y="335" text-anchor="start">dequeue: снял sa</text>
+<text x="721" y="335" text-anchor="end">dequeue: снял sb</text>
+<line class="ar ok" x1="108" y1="394" x2="510" y2="394"/>
+<text class="okt" x="309.0" y="386" text-anchor="middle">CAS 0 → 1: выиграл</text>
+<line class="ar w" x1="932" y1="394" x2="546" y2="394" style="marker-end:none"/>
+<text class="wt" x="739.0" y="386" text-anchor="middle">CAS 0 → 1: проиграл</text>
+<line class="x" x1="539" y1="387" x2="553" y2="401"/>
+<line class="x" x1="539" y1="401" x2="553" y2="387"/>
+<line class="ar ok d" x1="108" y1="458" x2="510" y2="458"/>
+<text class="okt" x="309.0" y="450" text-anchor="middle">send: значение, goready(G)</text>
+<rect class="note w" x="840.0" y="433.0" width="200" height="50" rx="6"/>
+<text x="940" y="454.0" text-anchor="middle">continue: в recvq b</text>
+<text x="940" y="473.0" text-anchor="middle">больше никого</text>
+<rect class="note ok" x="427.0" y="497.0" width="186" height="50" rx="6"/>
+<text x="520" y="518.0" text-anchor="middle">sellock(a, b)</text>
+<text x="520" y="537.0" text-anchor="middle">selectDone = 0</text>
+<rect class="note w" x="840.0" y="564.1" width="200" height="31" rx="6"/>
+<text x="940" y="585.1" text-anchor="middle">B ждет в sendq b</text>
+<line class="ar " x1="528" y1="586" x2="725" y2="586"/>
+<text x="626.5" y="578" text-anchor="middle">проход 3: убрать sb</text>
+<rect class="note " x="647.0" y="609.0" width="176" height="50" rx="6"/>
+<text x="735" y="630.0" text-anchor="middle">sb уже снят B:</text>
+<text x="735" y="649.0" text-anchor="middle">делать нечего</text>
+<rect class="note ok" x="420.0" y="653.7" width="200" height="31" rx="6"/>
+<text x="520" y="674.7" text-anchor="middle">select вернул case a</text>
+<text class="lbl" x="24" y="727" text-anchor="start">chan.go:872–905 (dequeue), select.go:84–99 (gopark), 354–401 (после пробуждения). go1.27.1</text>
+</svg>

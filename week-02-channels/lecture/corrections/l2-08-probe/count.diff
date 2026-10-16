@@ -1,0 +1,24 @@
+--- chan.go (go1.27.1)
++++ chan.go (L2-08: count)
+@@ -896,8 +896,10 @@
+ 		if sgp.isSelect {
+ 			if !sgp.g.selectDone.CompareAndSwap(0, 1) {
+ 				// We lost the race to wake this goroutine.
++				selectRaceLost.Add(1) // L2-08 probe
+ 				continue
+ 			}
++			selectRaceWon.Add(1) // L2-08 probe
+ 		}
+ 
+ 		return sgp
+@@ -954,3 +956,10 @@
+ 		}
+ 	}
+ }
++
++// L2-08 probe only: wake-up races of a select in waitq.dequeue.
++var selectRaceWon, selectRaceLost atomic.Uint64
++
++func SelectRaceCounts() (won, lost uint64) {
++	return selectRaceWon.Load(), selectRaceLost.Load()
++}
