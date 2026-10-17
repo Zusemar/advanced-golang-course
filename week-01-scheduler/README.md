@@ -15,7 +15,7 @@ global run queue, parked goroutines, idle Ms and sysmon.
 
 The runnable demos are in [demos/](demos/). The practice session, a bounded parallel
 executor built in six steps, is in [practice/](practice/). The homework, `ParallelMap`,
-is in [homework/](homework/), due Friday 16 October, 23:59 MSK. The slides and the lecture
+is in [homework/](homework/), due Saturday 17 October, 23:59 MSK. The slides and the lecture
 text come later.
 
 ## OS background: videos
