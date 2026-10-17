@@ -1,0 +1,46 @@
+--- chan.go (go1.27.1)
++++ chan.go (L2-02: nolock + guard + counters)
+@@ -235,17 +235,29 @@
+ 
+ 	if c.qcount < c.dataqsiz {
+ 		// Space is available in the channel buffer. Enqueue the element to send.
+-		qp := chanbuf(c, c.sendx)
++		unlock(&c.lock) // L2-02 probe: the ring write below runs without the lock
++		i := c.sendx
++		if i >= c.dataqsiz { // L2-02 probe: sendx is outside buf; write slot 0, not past the end
++			ringBadIndex.Add(1)
++			i = 0
++		}
++		qp := chanbuf(c, i)
+ 		if raceenabled {
+ 			racenotify(c, c.sendx, nil)
+ 		}
++		if c.elemsize == 8 && *(*uintptr)(qp) != 0 { // L2-02 probe: the slot still holds a value
++			ringOverwrite.Add(1)
++		}
+ 		typedmemmove(c.elemtype, qp, ep)
+ 		c.sendx++
+ 		if c.sendx == c.dataqsiz {
+ 			c.sendx = 0
+ 		}
+ 		c.qcount++
+-		unlock(&c.lock)
++		if c.qcount > c.dataqsiz { // L2-02 probe
++			ringOverfull.Add(1)
++		}
++		ringWrites.Add(1) // L2-02 probe
+ 		return true
+ 	}
+ 
+@@ -954,3 +966,11 @@
+ 		}
+ 	}
+ }
++
++// L2-02 probe only: ring writes in chansend, writes after which qcount > dataqsiz, writes
++// that found sendx outside the buffer, and writes into a slot that still held a value.
++var ringWrites, ringOverfull, ringBadIndex, ringOverwrite atomic.Uint64
++
++func RingRaceCounts() (writes, overfull, badindex, overwrite uint64) {
++	return ringWrites.Load(), ringOverfull.Load(), ringBadIndex.Load(), ringOverwrite.Load()
++}
