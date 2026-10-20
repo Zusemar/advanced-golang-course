@@ -1,6 +1,6 @@
 # Week 2 homework: Broadcaster
 
-Due Saturday 24 October 2026, 23:59 MSK. Whatever is on `main` in your fork at that
+Due Wednesday 28 October 2026, 23:59 MSK. Whatever is on `main` in your fork at that
 moment is what gets graded.
 
 ## What you implement
