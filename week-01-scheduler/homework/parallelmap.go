@@ -4,7 +4,10 @@
 // parallel, with a bound on how many calls run at once.
 package parallelmap
 
-import "context"
+import (
+	"context"
+	"sync"
+)
 
 // Map calls f on every element of in and returns the results in order:
 // out[i] is the result of f(ctx, in[i]). f is called exactly once per element.
@@ -32,5 +35,87 @@ import "context"
 //
 // workers > len(in) is allowed. ctx must not be nil, and f must not panic.
 func Map[T, R any](ctx context.Context, in []T, workers int, f func(context.Context, T) (R, error)) ([]R, error) {
-	panic("parallelmap: Map is not implemented")
+	if workers < 1 {
+		panic("parallelmap: workers must be at least 1")
+	}
+	if err := ctx.Err(); err != nil {
+		return nil, err
+	}
+	if len(in) == 0 {
+		return nil, nil
+	}
+
+	type job struct {
+		index int
+		value T
+	}
+
+	workCtx, cancel := context.WithCancel(ctx)
+	defer cancel()
+
+	out := make([]R, len(in))
+	jobs := make(chan job)
+	producerDone := make(chan struct{})
+
+	// The producer sends work only while the derived context remains active.
+	// It always closes jobs so workers can finish normally.
+	go func() {
+		defer close(producerDone)
+		defer close(jobs)
+		for i, value := range in {
+			select {
+			case <-workCtx.Done():
+				return
+			case jobs <- job{index: i, value: value}:
+			}
+		}
+	}()
+
+	var (
+		wg       sync.WaitGroup
+		once     sync.Once
+		firstErr error
+	)
+	wg.Add(workers)
+	for n := 0; n < workers; n++ {
+		go func() {
+			defer wg.Done()
+			for {
+				select {
+				case <-workCtx.Done():
+					return
+				case current, ok := <-jobs:
+					if !ok {
+						return
+					}
+					// Cancellation and receipt of a job may become ready together.
+					// Check again so a queued job is not started after shutdown.
+					if workCtx.Err() != nil {
+						return
+					}
+
+					result, err := f(workCtx, current.value)
+					if err != nil {
+						once.Do(func() {
+							firstErr = err
+							cancel()
+						})
+						return
+					}
+					out[current.index] = result
+				}
+			}
+		}()
+	}
+
+	wg.Wait()
+	<-producerDone
+
+	if firstErr != nil {
+		return nil, firstErr
+	}
+	if err := ctx.Err(); err != nil {
+		return nil, err
+	}
+	return out, nil
 }
