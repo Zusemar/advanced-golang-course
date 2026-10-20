@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="diagram" viewBox="0 0 1000 560" width="1000" height="560" role="img" aria-label="Отправка в канал типа &lt;-chan int останавливается в компиляторе: ошибка, бинаря нет. Та же отправка в chan int или chan&lt;- int компилируется в один и тот же вызов runtime.chansend1, а в hchan поля направления нет. Во время выполнения направление есть только в дескрипторе типа abi.ChanType. Код канала его не читает, проверяет его reflect.">
+<defs><marker id="ah-fg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahfg" d="M0 0L10 5L0 10z"/></marker><marker id="ah-ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahac" d="M0 0L10 5L0 10z"/></marker><marker id="ah-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahw" d="M0 0L10 5L0 10z"/></marker></defs>
+<style>
+.diagram {
+  --bg: #fbfaf7; --fg: #1d1d1b; --muted: #6b6a66; --rule: #dcd9d1;
+  --accent: #0b6e8a; --code-bg: #f1efe9; --warn: #a3431b; --bi: #2a78d6; --dir: #eb6834;
+}
+@media (prefers-color-scheme: dark) { .diagram {
+  --bg: #161615; --fg: #ecebe6; --muted: #9b9a94; --rule: #3a3936;
+  --accent: #5cc3dd; --code-bg: #22211f; --warn: #ef8a5c; --bi: #3987e5; --dir: #d95926;
+} }
+.diagram { font-family: system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+.diagram .bgr { fill: var(--bg); }
+.diagram text { fill: var(--fg); font-size: 15px; }
+.diagram .lbl { fill: var(--muted); font-size: 13.5px; }
+.diagram .ttl { fill: var(--accent); font-size: 17px; font-weight: 700; }
+.diagram .col { fill: var(--muted); font-size: 13.5px; font-weight: 700; letter-spacing: 0.04em; }
+.diagram .b { font-weight: 700; }
+.diagram .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 13.5px; }
+.diagram .warnt { fill: var(--warn); font-weight: 700; }
+.diagram .box { fill: var(--code-bg); stroke: var(--rule); stroke-width: 2; }
+.diagram .boxa { fill: var(--code-bg); stroke: var(--accent); stroke-width: 2.5; }
+.diagram .boxw { fill: var(--bg); stroke: var(--warn); stroke-width: 2.5; }
+.diagram .arrow { stroke: var(--fg); stroke-width: 2; fill: none; marker-end: url(#ah-fg); }
+.diagram .arrow.a { stroke: var(--accent); marker-end: url(#ah-ac); }
+.diagram .arrow.w { stroke: var(--warn); marker-end: url(#ah-w); }
+.diagram .ahfg { fill: var(--fg); }
+.diagram .ahac { fill: var(--accent); }
+.diagram .ahw { fill: var(--warn); }
+.diagram .grid { stroke: var(--rule); stroke-width: 1; }
+.diagram .sep { stroke: var(--rule); stroke-width: 1.5; }
+.diagram .dbi { fill: var(--bi); stroke: var(--bg); stroke-width: 2; }
+.diagram .ddir { fill: var(--dir); stroke: var(--bg); stroke-width: 2; }
+.diagram .med { stroke: var(--fg); stroke-width: 2.5; stroke-linecap: round; }
+</style>
+<rect class="bgr" width="1000" height="560"/>
+<text class="ttl" x="24" y="32">Где живет направление канала</text>
+<text class="col" x="24" y="66">ИСХОДНИК</text>
+<text class="col" x="270" y="66">ПРОВЕРКА ТИПОВ</text>
+<text class="col" x="516" y="66">МАШИННЫЙ КОД</text>
+<text class="col" x="762" y="66">РАНТАЙМ</text>
+<line class="sep" x1="24" y1="78" x2="976" y2="78"/>
+<rect class="box" x="24" y="96" width="214" height="96" rx="8"/>
+<text class="mono" x="38" y="122">func f(ch &lt;-chan int) {</text>
+<text class="mono" x="38" y="143">    ch &lt;- 1</text>
+<text class="mono" x="38" y="164">}</text>
+<rect class="boxa" x="270" y="96" width="214" height="96" rx="8"/>
+<text class="b" x="284" y="122">компилятор (types2)</text>
+<text class="" x="284" y="143">сверяет направление</text>
+<text class="lbl" x="284" y="164">expr.go:211</text>
+<rect class="boxw" x="516" y="96" width="460" height="96" rx="8"/>
+<text class="warnt" x="530" y="122">ошибка компиляции, бинаря нет:</text>
+<text class="mono" x="530" y="143">invalid operation: cannot send to</text>
+<text class="mono" x="530" y="164">receive-only channel &lt;-chan int ch</text>
+<line class="arrow" x1="241" y1="144" x2="265" y2="144"/>
+<line class="arrow w" x1="487" y1="144" x2="511" y2="144"/>
+<rect class="box" x="24" y="230" width="214" height="118" rx="8"/>
+<text class="mono" x="38" y="256">func g(ch chan&lt;- int) {</text>
+<text class="mono" x="38" y="277">    ch &lt;- 1</text>
+<text class="mono" x="38" y="298">}</text>
+<text class="lbl" x="38" y="319">или ch chan int</text>
+<rect class="boxa" x="270" y="230" width="214" height="118" rx="8"/>
+<text class="b" x="284" y="256">компилятор (types2)</text>
+<text class="" x="284" y="277">направление верное,</text>
+<text class="" x="284" y="298">ошибки нет</text>
+<rect class="box" x="516" y="230" width="214" height="118" rx="8"/>
+<text class="b" x="530" y="256">компилятор (walk)</text>
+<text class="" x="530" y="277">вызов по типу элемента</text>
+<text class="" x="530" y="298">байты одинаковые:</text>
+<text class="mono" x="530" y="319">CALL runtime.chansend1</text>
+<rect class="box" x="762" y="230" width="214" height="118" rx="8"/>
+<text class="b" x="776" y="256">hchan</text>
+<text class="mono" x="776" y="277">buf, sendx, recvx,</text>
+<text class="mono" x="776" y="298">sendq, recvq, lock</text>
+<text class="" x="776" y="319">направления нет</text>
+<line class="arrow" x1="241" y1="289" x2="265" y2="289"/>
+<line class="arrow" x1="487" y1="289" x2="511" y2="289"/>
+<line class="arrow" x1="733" y1="289" x2="757" y2="289"/>
+<line class="sep" x1="24" y1="384" x2="976" y2="384"/>
+<text class="col" x="24" y="412">ВО ВРЕМЯ ВЫПОЛНЕНИЯ</text>
+<rect class="boxa" x="24" y="428" width="460" height="96" rx="8"/>
+<text class="b" x="38" y="454">дескриптор типа</text>
+<text class="mono" x="38" y="475">abi.ChanType{Elem, Dir}</text>
+<text class="lbl" x="38" y="496">internal/abi/type.go:299–303</text>
+<rect class="box" x="516" y="428" width="460" height="96" rx="8"/>
+<text class="b" x="530" y="454">reflect: Send, Recv, Close, Select</text>
+<text class="" x="530" y="475">паникуют, если направление не то;</text>
+<text class="" x="530" y="496">MakeChan не создает однонаправленный канал</text>
+<line class="arrow a" x1="487" y1="476" x2="511" y2="476"/>
+<line class="arrow a" x1="377" y1="352" x2="377" y2="422"/>
+<text class="lbl" x="387" y="410">тип со своим Dir</text>
+<text class="lbl" x="24" y="546">Код канала в рантайме (chan.go, select.go) поле Dir не читает. go1.27.1, ссылки на строки в тексте.</text>
+</svg>

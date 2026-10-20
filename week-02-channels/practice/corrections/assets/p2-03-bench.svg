@@ -1,0 +1,191 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="diagram" viewBox="0 0 960 470" width="960" height="470" role="img" aria-label="Шесть вариантов по 20 раундов: прием и отправка через chan int, через однонаправленный канал и через точную копию функции. Все точки лежат между 25.9 и 27.3 нс, медианы от 26.4 до 26.7 нс, однонаправленный канал не отличается от копии.">
+<defs><marker id="ah-fg" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahfg" d="M0 0L10 5L0 10z"/></marker><marker id="ah-ac" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahac" d="M0 0L10 5L0 10z"/></marker><marker id="ah-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path class="ahw" d="M0 0L10 5L0 10z"/></marker></defs>
+<style>
+.diagram {
+  --bg: #fbfaf7; --fg: #1d1d1b; --muted: #6b6a66; --rule: #dcd9d1;
+  --accent: #0b6e8a; --code-bg: #f1efe9; --warn: #a3431b; --bi: #2a78d6; --dir: #eb6834;
+}
+@media (prefers-color-scheme: dark) { .diagram {
+  --bg: #161615; --fg: #ecebe6; --muted: #9b9a94; --rule: #3a3936;
+  --accent: #5cc3dd; --code-bg: #22211f; --warn: #ef8a5c; --bi: #3987e5; --dir: #d95926;
+} }
+.diagram { font-family: system-ui, "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+.diagram .bgr { fill: var(--bg); }
+.diagram text { fill: var(--fg); font-size: 15px; }
+.diagram .lbl { fill: var(--muted); font-size: 13.5px; }
+.diagram .ttl { fill: var(--accent); font-size: 17px; font-weight: 700; }
+.diagram .col { fill: var(--muted); font-size: 13.5px; font-weight: 700; letter-spacing: 0.04em; }
+.diagram .b { font-weight: 700; }
+.diagram .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 13.5px; }
+.diagram .warnt { fill: var(--warn); font-weight: 700; }
+.diagram .box { fill: var(--code-bg); stroke: var(--rule); stroke-width: 2; }
+.diagram .boxa { fill: var(--code-bg); stroke: var(--accent); stroke-width: 2.5; }
+.diagram .boxw { fill: var(--bg); stroke: var(--warn); stroke-width: 2.5; }
+.diagram .arrow { stroke: var(--fg); stroke-width: 2; fill: none; marker-end: url(#ah-fg); }
+.diagram .arrow.a { stroke: var(--accent); marker-end: url(#ah-ac); }
+.diagram .arrow.w { stroke: var(--warn); marker-end: url(#ah-w); }
+.diagram .ahfg { fill: var(--fg); }
+.diagram .ahac { fill: var(--accent); }
+.diagram .ahw { fill: var(--warn); }
+.diagram .grid { stroke: var(--rule); stroke-width: 1; }
+.diagram .sep { stroke: var(--rule); stroke-width: 1.5; }
+.diagram .dbi { fill: var(--bi); stroke: var(--bg); stroke-width: 2; }
+.diagram .ddir { fill: var(--dir); stroke: var(--bg); stroke-width: 2; }
+.diagram .med { stroke: var(--fg); stroke-width: 2.5; stroke-linecap: round; }
+</style>
+<rect class="bgr" width="960" height="470"/>
+<text class="ttl" x="24" y="32">Одна отправка и один прием в буферизованном канале, нс</text>
+<text class="lbl" x="860" y="66">медиана</text>
+<line class="grid" x1="296.7" y1="76" x2="296.7" y2="380"/>
+<text class="lbl" x="296.7" y="400" text-anchor="middle">26.0</text>
+<line class="grid" x1="463.3" y1="76" x2="463.3" y2="380"/>
+<text class="lbl" x="463.3" y="400" text-anchor="middle">26.5</text>
+<line class="grid" x1="630.0" y1="76" x2="630.0" y2="380"/>
+<text class="lbl" x="630.0" y="400" text-anchor="middle">27.0</text>
+<line class="grid" x1="796.7" y1="76" x2="796.7" y2="380"/>
+<text class="lbl" x="796.7" y="400" text-anchor="middle">27.5</text>
+<text class="b" x="24" y="92">Прием внутри функции</text>
+<text class="mono" x="214" y="113" text-anchor="end">chan int</text>
+<circle class="dbi" cx="433.1" cy="102" r="4.5"/>
+<circle class="dbi" cx="477.7" cy="105" r="4.5"/>
+<circle class="dbi" cx="442.2" cy="108" r="4.5"/>
+<circle class="dbi" cx="444.8" cy="111" r="4.5"/>
+<circle class="dbi" cx="446.4" cy="114" r="4.5"/>
+<circle class="dbi" cx="398.2" cy="102" r="4.5"/>
+<circle class="dbi" cx="643.0" cy="105" r="4.5"/>
+<circle class="dbi" cx="566.8" cy="108" r="4.5"/>
+<circle class="dbi" cx="615.0" cy="111" r="4.5"/>
+<circle class="dbi" cx="522.9" cy="114" r="4.5"/>
+<circle class="dbi" cx="528.8" cy="102" r="4.5"/>
+<circle class="dbi" cx="524.5" cy="105" r="4.5"/>
+<circle class="dbi" cx="674.6" cy="108" r="4.5"/>
+<circle class="dbi" cx="571.7" cy="111" r="4.5"/>
+<circle class="dbi" cx="416.8" cy="114" r="4.5"/>
+<circle class="dbi" cx="467.6" cy="102" r="4.5"/>
+<circle class="dbi" cx="472.1" cy="105" r="4.5"/>
+<circle class="dbi" cx="541.5" cy="108" r="4.5"/>
+<circle class="dbi" cx="455.2" cy="111" r="4.5"/>
+<circle class="dbi" cx="482.9" cy="114" r="4.5"/>
+<line class="med" x1="480.3" y1="96" x2="480.3" y2="120"/>
+<text x="860" y="113">26.6</text>
+<text class="mono" x="214" y="151" text-anchor="end">&lt;-chan int</text>
+<circle class="ddir" cx="442.5" cy="140" r="4.5"/>
+<circle class="ddir" cx="442.2" cy="143" r="4.5"/>
+<circle class="ddir" cx="510.5" cy="146" r="4.5"/>
+<circle class="ddir" cx="422.0" cy="149" r="4.5"/>
+<circle class="ddir" cx="422.6" cy="152" r="4.5"/>
+<circle class="ddir" cx="456.8" cy="140" r="4.5"/>
+<circle class="ddir" cx="576.0" cy="143" r="4.5"/>
+<circle class="ddir" cx="582.8" cy="146" r="4.5"/>
+<circle class="ddir" cx="574.0" cy="149" r="4.5"/>
+<circle class="ddir" cx="592.9" cy="152" r="4.5"/>
+<circle class="ddir" cx="599.7" cy="140" r="4.5"/>
+<circle class="ddir" cx="519.6" cy="143" r="4.5"/>
+<circle class="ddir" cx="515.4" cy="146" r="4.5"/>
+<circle class="ddir" cx="534.9" cy="149" r="4.5"/>
+<circle class="ddir" cx="553.8" cy="152" r="4.5"/>
+<circle class="ddir" cx="483.8" cy="140" r="4.5"/>
+<circle class="ddir" cx="404.4" cy="143" r="4.5"/>
+<circle class="ddir" cx="502.7" cy="146" r="4.5"/>
+<circle class="ddir" cx="655.7" cy="149" r="4.5"/>
+<circle class="ddir" cx="609.8" cy="152" r="4.5"/>
+<line class="med" x1="517.5" y1="134" x2="517.5" y2="158"/>
+<text x="860" y="151">26.7</text>
+<text class="mono" x="214" y="189" text-anchor="end">chan int, копия</text>
+<circle class="dbi" cx="511.5" cy="178" r="4.5"/>
+<circle class="dbi" cx="476.0" cy="181" r="4.5"/>
+<circle class="dbi" cx="444.8" cy="184" r="4.5"/>
+<circle class="dbi" cx="482.5" cy="187" r="4.5"/>
+<circle class="dbi" cx="501.1" cy="190" r="4.5"/>
+<circle class="dbi" cx="534.6" cy="178" r="4.5"/>
+<circle class="dbi" cx="572.1" cy="181" r="4.5"/>
+<circle class="dbi" cx="577.3" cy="184" r="4.5"/>
+<circle class="dbi" cx="561.6" cy="187" r="4.5"/>
+<circle class="dbi" cx="653.8" cy="190" r="4.5"/>
+<circle class="dbi" cx="636.2" cy="178" r="4.5"/>
+<circle class="dbi" cx="549.9" cy="181" r="4.5"/>
+<circle class="dbi" cx="675.2" cy="184" r="4.5"/>
+<circle class="dbi" cx="528.8" cy="187" r="4.5"/>
+<circle class="dbi" cx="456.8" cy="190" r="4.5"/>
+<circle class="dbi" cx="512.2" cy="178" r="4.5"/>
+<circle class="dbi" cx="531.4" cy="181" r="4.5"/>
+<circle class="dbi" cx="482.5" cy="184" r="4.5"/>
+<circle class="dbi" cx="591.3" cy="187" r="4.5"/>
+<circle class="dbi" cx="544.1" cy="190" r="4.5"/>
+<line class="med" x1="533.0" y1="172" x2="533.0" y2="196"/>
+<text x="860" y="189">26.7</text>
+<text class="b" x="24" y="242">Отправка внутри функции</text>
+<text class="mono" x="214" y="263" text-anchor="end">chan int</text>
+<circle class="dbi" cx="425.6" cy="252" r="4.5"/>
+<circle class="dbi" cx="334.8" cy="255" r="4.5"/>
+<circle class="dbi" cx="409.0" cy="258" r="4.5"/>
+<circle class="dbi" cx="417.4" cy="261" r="4.5"/>
+<circle class="dbi" cx="400.8" cy="264" r="4.5"/>
+<circle class="dbi" cx="588.0" cy="252" r="4.5"/>
+<circle class="dbi" cx="521.3" cy="255" r="4.5"/>
+<circle class="dbi" cx="476.0" cy="258" r="4.5"/>
+<circle class="dbi" cx="572.4" cy="261" r="4.5"/>
+<circle class="dbi" cx="563.6" cy="264" r="4.5"/>
+<circle class="dbi" cx="585.1" cy="252" r="4.5"/>
+<circle class="dbi" cx="562.9" cy="255" r="4.5"/>
+<circle class="dbi" cx="555.1" cy="258" r="4.5"/>
+<circle class="dbi" cx="555.1" cy="261" r="4.5"/>
+<circle class="dbi" cx="506.6" cy="264" r="4.5"/>
+<circle class="dbi" cx="453.6" cy="252" r="4.5"/>
+<circle class="dbi" cx="372.8" cy="255" r="4.5"/>
+<circle class="dbi" cx="385.2" cy="258" r="4.5"/>
+<circle class="dbi" cx="495.9" cy="261" r="4.5"/>
+<circle class="dbi" cx="692.5" cy="264" r="4.5"/>
+<line class="med" x1="501.3" y1="246" x2="501.3" y2="270"/>
+<text x="860" y="263">26.6</text>
+<text class="mono" x="214" y="301" text-anchor="end">chan&lt;- int</text>
+<circle class="ddir" cx="316.2" cy="290" r="4.5"/>
+<circle class="ddir" cx="388.1" cy="293" r="4.5"/>
+<circle class="ddir" cx="379.3" cy="296" r="4.5"/>
+<circle class="ddir" cx="446.7" cy="299" r="4.5"/>
+<circle class="ddir" cx="432.1" cy="302" r="4.5"/>
+<circle class="ddir" cx="456.5" cy="290" r="4.5"/>
+<circle class="ddir" cx="578.6" cy="293" r="4.5"/>
+<circle class="ddir" cx="737.4" cy="296" r="4.5"/>
+<circle class="ddir" cx="457.5" cy="299" r="4.5"/>
+<circle class="ddir" cx="289.2" cy="302" r="4.5"/>
+<circle class="ddir" cx="425.6" cy="290" r="4.5"/>
+<circle class="ddir" cx="515.1" cy="293" r="4.5"/>
+<circle class="ddir" cx="297.0" cy="296" r="4.5"/>
+<circle class="ddir" cx="351.4" cy="299" r="4.5"/>
+<circle class="ddir" cx="416.1" cy="302" r="4.5"/>
+<circle class="ddir" cx="420.7" cy="290" r="4.5"/>
+<circle class="ddir" cx="551.2" cy="293" r="4.5"/>
+<circle class="ddir" cx="462.0" cy="296" r="4.5"/>
+<circle class="ddir" cx="447.1" cy="299" r="4.5"/>
+<circle class="ddir" cx="577.9" cy="302" r="4.5"/>
+<line class="med" x1="439.4" y1="284" x2="439.4" y2="308"/>
+<text x="860" y="301">26.4</text>
+<text class="mono" x="214" y="339" text-anchor="end">chan int, копия</text>
+<circle class="dbi" cx="389.1" cy="328" r="4.5"/>
+<circle class="dbi" cx="411.6" cy="331" r="4.5"/>
+<circle class="dbi" cx="355.3" cy="334" r="4.5"/>
+<circle class="dbi" cx="449.0" cy="337" r="4.5"/>
+<circle class="dbi" cx="342.6" cy="340" r="4.5"/>
+<circle class="dbi" cx="437.3" cy="328" r="4.5"/>
+<circle class="dbi" cx="535.3" cy="331" r="4.5"/>
+<circle class="dbi" cx="481.2" cy="334" r="4.5"/>
+<circle class="dbi" cx="502.7" cy="337" r="4.5"/>
+<circle class="dbi" cx="467.2" cy="340" r="4.5"/>
+<circle class="dbi" cx="487.1" cy="328" r="4.5"/>
+<circle class="dbi" cx="494.3" cy="331" r="4.5"/>
+<circle class="dbi" cx="578.2" cy="334" r="4.5"/>
+<circle class="dbi" cx="447.4" cy="337" r="4.5"/>
+<circle class="dbi" cx="269.6" cy="340" r="4.5"/>
+<circle class="dbi" cx="407.0" cy="328" r="4.5"/>
+<circle class="dbi" cx="442.2" cy="331" r="4.5"/>
+<circle class="dbi" cx="495.2" cy="334" r="4.5"/>
+<circle class="dbi" cx="522.9" cy="337" r="4.5"/>
+<circle class="dbi" cx="490.4" cy="340" r="4.5"/>
+<line class="med" x1="458.1" y1="322" x2="458.1" y2="346"/>
+<text x="860" y="339">26.5</text>
+<circle class="dbi" cx="30" cy="421" r="6"/><text x="44" y="426">двунаправленный chan int</text>
+<circle class="ddir" cx="272" cy="421" r="6"/><text x="286" y="426">однонаправленный</text>
+<line class="med" x1="452" y1="411" x2="452" y2="431"/><text x="464" y="426">медиана</text>
+<text class="lbl" x="24" y="456">Точка: один раунд из 20, варианты чередуются. Ось начинается не с нуля. i5-13600KF, WSL2, -cpu=1, go1.27.1, 17.10.2026</text>
+</svg>
