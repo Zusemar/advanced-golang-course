@@ -1,0 +1,26 @@
+--- chan.go (go1.27.1)
++++ chan.go (L2-08: CAS removed)
+@@ -894,10 +894,8 @@
+ 		// else has won the race to signal this goroutine but the goroutine
+ 		// hasn't removed itself from the queue yet.
+ 		if sgp.isSelect {
+-			if !sgp.g.selectDone.CompareAndSwap(0, 1) {
+-				// We lost the race to wake this goroutine.
+-				continue
+-			}
++			// L2-08 probe: CAS removed, every waker wins.
++			selectRaceWon.Add(1)
+ 		}
+ 
+ 		return sgp
+@@ -954,3 +952,10 @@
+ 		}
+ 	}
+ }
++
++// L2-08 probe only: wake-up races of a select in waitq.dequeue.
++var selectRaceWon, selectRaceLost atomic.Uint64
++
++func SelectRaceCounts() (won, lost uint64) {
++	return selectRaceWon.Load(), selectRaceLost.Load()
++}

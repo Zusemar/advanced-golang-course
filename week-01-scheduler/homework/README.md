@@ -1,6 +1,6 @@
 # Week 1 homework: ParallelMap
 
-Due Friday 16 October 2026, 23:59 MSK.
+Due Saturday 17 October 2026, 23:59 MSK.
 
 In the practice session we built an executor that runs tasks with at most `n` at once. Now
 finish it: return results in order, stop on the first error, and respect cancellation.
